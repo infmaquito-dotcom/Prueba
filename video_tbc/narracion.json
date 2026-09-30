@@ -1,0 +1,168 @@
+{
+  "voz": "em_alex",
+  "velocidad": 0.95,
+  "escenas": [
+    {"id": "gancho", "titulo": "Gancho", "cues": [
+      {"id": "g1", "texto": "El 3 de octubre llega TBC.",
+       "decir": "El tres de octubre, llega te be ce."},
+      {"id": "g2", "texto": "Nueva expansión, nuevas bandas… y una forma justa de repartir el botín.",
+       "decir": "Nueva expansión, nuevas bandas... y una forma justa de repartir el botín."}
+    ]},
+    {"id": "problema", "titulo": "El problema", "cues": [
+      {"id": "p1", "texto": "Veinticinco jugadores en la banda… y el jefe suelta muy pocos objetos.",
+       "decir": "Veinticinco jugadores en la banda... y el jefe suelta muy pocos objetos."},
+      {"id": "p2", "texto": "Repartir a mano es lento, y llegan las dudas: «¿por qué se lo llevó él?», «yo vine a todas las raids», «él ya tiene tres cosas».",
+       "decir": "Repartir a mano es lento, y llegan las dudas: ¿por qué se lo llevó él? Yo vine a todas las reids. Él ya tiene tres cosas."},
+      {"id": "p3", "texto": "Por eso la hermandad creó sus propias herramientas: para que todo sea justo, claro y visible para todos.",
+       "decir": "Por eso, la hermandad creó sus propias herramientas: para que todo sea justo, claro, y visible para todos."}
+    ]},
+    {"id": "herramientas", "titulo": "Las tres herramientas", "cues": [
+      {"id": "h1", "texto": "Son tres piezas que trabajan juntas.",
+       "decir": "Son tres piezas que trabajan juntas."},
+      {"id": "h2", "texto": "La página web de la hermandad: softres.xdataplusx.com",
+       "decir": "La página web de la hermandad: sóft res, punto, equis data plus equis, punto com."},
+      {"id": "h3", "texto": "El addon SoftReserve335, que reparte el botín dentro del juego.",
+       "decir": "El ádon Soft Riserv, tres, tres, cinco, que reparte el botín dentro del juego."},
+      {"id": "h4", "texto": "Y el addon BisTooltip: una guía que te dice qué objetos son los mejores para tu personaje.",
+       "decir": "Y el ádon Bis Túltip: una guía que te dice qué objetos son los mejores para tu personaje."},
+      {"id": "h5", "texto": "Un addon es un pequeño programa que se instala dentro del juego, copiando una carpeta en la carpeta de addons. Es gratis y está permitido.",
+       "decir": "Un ádon es un pequeño programa que se instala dentro del juego, copiando una carpeta en la carpeta de ádons. Es gratis, y está permitido."},
+      {"id": "h6", "texto": "En resumen: la web te registra, BisTooltip te guía y SoftReserve reparte.",
+       "decir": "En resumen: la web te registra, Bis Túltip te guía, y Soft Riserv reparte."}
+    ]},
+    {"id": "registro", "titulo": "Paso 1: regístrate en la web", "cues": [
+      {"id": "r1", "texto": "Paso uno: regístrate en la web. La portada es pública: explica quiénes somos y cómo entrar.",
+       "decir": "Paso uno: regístrate en la web. La portada es pública: explica quiénes somos, y cómo entrar."},
+      {"id": "r2", "texto": "Entras con tu cuenta de Discord. Lo que puedes ver depende de tu rol en el Discord de la hermandad.",
+       "decir": "Entras con tu cuenta de Díscord. Lo que puedes ver, depende de tu rol en el Díscord de la hermandad."},
+      {"id": "r3", "texto": "Lo primero que te pide es tu personaje principal de TBC: nombre, clase y spec.",
+       "decir": "Lo primero que te pide, es tu personaje principal de te be ce: nombre, clase, y espec."},
+      {"id": "r4", "texto": "Si no vas a raidear en TBC, pulsa «No voy a raidear en TBC». También es una respuesta válida. Sin contestar, no se entra.",
+       "decir": "Si no vas a reidear en te be ce, pulsa: no voy a reidear en te be ce. También es una respuesta válida. Sin contestar, no se entra."},
+      {"id": "r5", "texto": "Luego viene lo más importante: «Mis personajes». Aquí declaras tu principal y tus alts.",
+       "decir": "Luego viene lo más importante: mis personajes. Aquí declaras tu principal, y tus alts."},
+      {"id": "r6", "texto": "La clase y la spec son obligatorias: un personaje sin ellas está apuntado, pero no existe para el reparto.",
+       "decir": "La clase y la espec son obligatorias: un personaje sin ellas está apuntado, pero no existe para el reparto."},
+      {"id": "r7", "texto": "Tu principal no lo puedes cambiar tú, solo un oficial. Así nadie se cambia de principal para colarse en la fila.",
+       "decir": "Tu principal no lo puedes cambiar tú, solo un oficial. Así, nadie se cambia de principal para colarse en la fila."},
+      {"id": "r8", "texto": "Debajo de cada personaje apuntas sus profesiones. La lista de profesiones la ve toda la hermandad, para saber a quién pedirle algo.",
+       "decir": "Debajo de cada personaje, apuntas sus profesiones. La lista de profesiones la ve toda la hermandad, para saber a quién pedirle algo."},
+      {"id": "r9", "texto": "Recuerda: sin registro no hay core. Y sin core, no hay rotación.",
+       "decir": "Recuerda: sin registro, no hay cor. Y sin cor, no hay rotación."}
+    ]},
+    {"id": "cores", "titulo": "Las cores", "cues": [
+      {"id": "k1", "texto": "Una core es el equipo fijo de 25 personas que raidea junto cada semana. La hermandad tiene dos cores, igual de competitivas: solo cambia el horario.",
+       "decir": "Una cor es el equipo fijo de veinticinco personas que reidea junto cada semana. La hermandad tiene dos cors, igual de competitivas: solo cambia el horario."},
+      {"id": "k2", "texto": "La página Cores muestra cada una como una formación de banda: quién ocupa cada puesto, cuántos tanques, sanadores y dps hay, y qué buffos aporta cada clase.",
+       "decir": "La página cors muestra cada una como una formación de banda: quién ocupa cada puesto, cuántos tanques, sanadores y de pe eses hay, y qué bufos aporta cada clase."},
+      {"id": "k3", "texto": "Un oficial arma la lista oficial de cada core y dice quién es tanque y quién es sanador.",
+       "decir": "Un oficial arma la lista oficial de cada cor, y dice quién es tanque, y quién es sanador."},
+      {"id": "k4", "texto": "Para entrar en la rotación de marcas tienes que estar en una core. Y para estar en una core: entra con Discord, registra tu principal de TBC y completa «Mis personajes» con clase y spec.",
+       "decir": "Para entrar en la rotación de marcas, tienes que estar en una cor. Y para estar en una cor: entra con Díscord, registra tu principal de te be ce, y completa mis personajes con clase y espec."},
+      {"id": "k5", "texto": "Si no estás registrado, el sistema no te ve… y no te toca turno.",
+       "decir": "Si no estás registrado, el sistema no te ve... y no te toca turno."}
+    ]},
+    {"id": "bistooltip", "titulo": "Paso 2: elige con BisTooltip", "cues": [
+      {"id": "b1", "texto": "Paso dos: elige con BisTooltip. BiS significa «Best in Slot»: el mejor objeto posible para cada parte de tu equipo.",
+       "decir": "Paso dos: elige con Bis Túltip. Bis significa, best in slot: el mejor objeto posible para cada parte de tu equipo."},
+      {"id": "b2", "texto": "Pasas el ratón por cualquier objeto, y el recuadro de información te dice para qué clases y specs es de los mejores, y en qué puesto de la lista está.",
+       "decir": "Pasas el ratón por cualquier objeto, y el recuadro de información te dice para qué clases y especs es de los mejores, y en qué puesto de la lista está."},
+      {"id": "b3", "texto": "Su ventana tiene las listas completas por clase, spec y fase. Se abre con clic izquierdo en su botón junto al minimapa, o escribiendo /bistooltip.",
+       "decir": "Su ventana tiene las listas completas por clase, espec, y fase. Se abre con clic izquierdo en su botón junto al minimapa, o escribiendo: barra, bis túltip."},
+      {"id": "b4", "texto": "Cada parte del equipo muestra hasta 6 opciones, de la mejor a la alternativa. Y al pasar el ratón por una, te dice de qué banda y de qué jefe sale.",
+       "decir": "Cada parte del equipo muestra hasta seis opciones, de la mejor a la alternativa. Y al pasar el ratón por una, te dice de qué banda, y de qué jefe sale."},
+      {"id": "b5", "texto": "Para TBC, haz clic derecho en el botón y, en sus opciones, elige la fuente «The Burning Crusade».",
+       "decir": "Para te be ce, haz clic derecho en el botón, y en sus opciones, elige la fuente: de berning cruseid."},
+      {"id": "b6", "texto": "Ojo: las listas son una referencia. El servidor puede cambiar estadísticas o botín.",
+       "decir": "Ojo: las listas son una referencia. El servidor puede cambiar estadísticas, o botín."}
+    ]},
+    {"id": "reserva", "titulo": "Paso 3: reserva en la web", "cues": [
+      {"id": "v1", "texto": "Paso tres: reserva en la web. Antes de cada banda, un oficial comparte el enlace de la raid.",
+       "decir": "Paso tres: reserva en la web. Antes de cada banda, un oficial comparte el enlace de la reid."},
+      {"id": "v2", "texto": "Entras, eliges tu personaje y reservas los objetos que quieres. Normalmente, uno por persona: el oficial decide cuántos.",
+       "decir": "Entras, eliges tu personaje, y reservas los objetos que quieres. Normalmente, uno por persona: el oficial decide cuántos."},
+      {"id": "v3", "texto": "Reserva lo que te recomendó BisTooltip: así no gastas tu reserva en algo que no te sirve. Esas reservas luego se cargan en el addon del juego.",
+       "decir": "Reserva lo que te recomendó Bis Túltip: así no gastas tu reserva en algo que no te sirve. Esas reservas, luego se cargan en el ádon del juego."}
+    ]},
+    {"id": "objeto", "titulo": "En la banda: cae un objeto", "cues": [
+      {"id": "o1", "texto": "Ya en la banda, cae un objeto. SoftReserve335 es obligatorio para todos los que van.",
+       "decir": "Ya en la banda, cae un objeto. Soft Riserv es obligatorio, para todos los que van."},
+      {"id": "o2", "texto": "Si alguien lo reservó en la web, solo tiran dados quienes lo reservaron.",
+       "decir": "Si alguien lo reservó en la web, solo tiran dados quienes lo reservaron."},
+      {"id": "o3", "texto": "Si nadie lo reservó, se tira por MS: necesidad principal. El objeto sirve para tu papel principal, y tiene prioridad.",
+       "decir": "Si nadie lo reservó, se tira por eme ese: necesidad principal. El objeto sirve para tu papel principal, y tiene prioridad."},
+      {"id": "o4", "texto": "OS: necesidad secundaria. Te sirve para un papel de reserva, y va después de MS.",
+       "decir": "O ese: necesidad secundaria. Te sirve para un papel de reserva, y va después de eme ese."},
+      {"id": "o5", "texto": "Y PASS: no lo quieres. Pasar también queda registrado.",
+       "decir": "Y pas: no lo quieres. Pasar también queda registrado."},
+      {"id": "o6", "texto": "Al caer el objeto, te aparece un aviso con esos botones. Pulsas uno, y el addon tira el dado por ti. Atento a la cuenta atrás: tienes unos segundos.",
+       "decir": "Al caer el objeto, te aparece un aviso con esos botones. Pulsas uno, y el ádon tira el dado por ti. Atento a la cuenta atrás: tienes unos segundos."}
+    ]},
+    {"id": "gana", "titulo": "Quién gana", "cues": [
+      {"id": "w1", "texto": "¿Quién gana? Cada vez que alguien gana un objeto por MS, se le suma un +1. Quien lleva menos +1 tiene prioridad. Ganar por reserva no suma.",
+       "decir": "¿Quién gana? Cada vez que alguien gana un objeto por eme ese, se le suma un más uno. Quien lleva menos más unos, tiene prioridad. Ganar por reserva, no suma."},
+      {"id": "w2", "texto": "La regla del orden: primero, reservas y MS, antes que OS. Luego gana quien lleve menos +1. Y al final decide el dado.",
+       "decir": "La regla del orden: primero, reservas y eme ese, antes que o ese. Luego, gana quien lleve menos más unos. Y al final, decide el dado."},
+      {"id": "w3", "texto": "Mira: Kharion saca 99 y lleva dos +1. Veltra saca 12 y lleva cero.",
+       "decir": "Mira: Kárion saca noventa y nueve, y lleva dos más unos. Veltra saca doce, y lleva cero."},
+      {"id": "w4", "texto": "Gana Veltra. No es un robo: llevaba menos +1.",
+       "decir": "Gana Veltra. No es un robo: llevaba menos más unos."},
+      {"id": "w5", "texto": "Y cualquiera puede comprobarlo: desde el aviso abres la misma lista que ve el maestro despojador, con la regla del orden escrita al pie.",
+       "decir": "Y cualquiera puede comprobarlo: desde el aviso, abres la misma lista que ve el maestro despojador, con la regla del orden escrita al pie."}
+    ]},
+    {"id": "recibir", "titulo": "Recibir el objeto", "cues": [
+      {"id": "e1", "texto": "Cuando ganas, toda la banda lo ve: quién ganó, con qué dado y por qué.",
+       "decir": "Cuando ganas, toda la banda lo ve: quién ganó, con qué dado, y por qué."},
+      {"id": "e2", "texto": "El addon te dice a quién acercarte. Sobre esa persona aparece un diamante mientras te deba algo.",
+       "decir": "El ádon te dice a quién acercarte. Sobre esa persona aparece un diamante, mientras te deba algo."},
+      {"id": "e3", "texto": "Si el objeto sigue en el cuerpo del jefe o en el cofre, te llega directo a la bolsa. Y en la web queda el historial: qué se llevó cada jugador, cuándo y contra cuántos compitió.",
+       "decir": "Si el objeto sigue en el cuerpo del jefe, o en el cofre, te llega directo a la bolsa. Y en la web queda el historial: qué se llevó cada jugador, cuándo, y contra cuántos compitió."}
+    ]},
+    {"id": "rotacion", "titulo": "La rotación de marcas", "cues": [
+      {"id": "m1", "texto": "Ahora, las marcas de conjunto: algunos jefes las sueltan, y se canjean por piezas de armadura de conjunto.",
+       "decir": "Ahora, las marcas de conjunto: algunos jefes las sueltan, y se canjean por piezas de armadura de conjunto."},
+      {"id": "m2", "texto": "En TBC, la rotación solo existe en Gruul y Magtheridon, las bandas de 25.",
+       "decir": "En te be ce, la rotación solo existe en Grul y Magtéridon, las bandas de veinticinco."},
+      {"id": "m3", "texto": "En Karazhan no hay rotación: todo se reserva, y se tira MS antes que OS.",
+       "decir": "En Karazán no hay rotación: todo se reserva, y se tira eme ese antes que o ese."},
+      {"id": "m4", "texto": "El orden es estricto: primero los tanques, luego los sanadores y luego los dps. Nadie se salta el turno.",
+       "decir": "El orden es estricto: primero los tanques, luego los sanadores, y luego los de pe eses. Nadie se salta el turno."},
+      {"id": "m5", "texto": "Entre los dps manda la asistencia: quien vino a más raids va primero. Solo si hay empate exacto se tiran dados. Premiamos a los más dedicados.",
+       "decir": "Entre los de pe eses manda la asistencia: quien vino a más reids, va primero. Solo si hay empate exacto, se tiran dados. Premiamos a los más dedicados."},
+      {"id": "m6", "texto": "Va por rondas: nadie repite marca hasta que todos los de su grupo tengan una.",
+       "decir": "Va por rondas: nadie repite marca, hasta que todos los de su grupo tengan una."},
+      {"id": "m7", "texto": "Los suplentes entran en la rotación desde su segunda raid con la core, una semana después de la primera.",
+       "decir": "Los suplentes entran en la rotación desde su segunda reid con la cor, una semana después de la primera."},
+      {"id": "m8", "texto": "Y los alts salen al final de la fila, marcados, y nunca pasan por delante de un principal.",
+       "decir": "Y los alts salen al final de la fila, marcados, y nunca pasan por delante de un principal."}
+    ]},
+    {"id": "asistencia", "titulo": "La asistencia", "cues": [
+      {"id": "a1", "texto": "El addon anota quién estuvo en cada jefe derrotado. Esa asistencia se sube a la web y decide tu lugar en la rotación.",
+       "decir": "El ádon anota quién estuvo en cada jefe derrotado. Esa asistencia se sube a la web, y decide tu lugar en la rotación."},
+      {"id": "a2", "texto": "Se cuenta por persona: si un día vienes con tu alt, también te cuenta, porque la web sabe que ese alt es tuyo.",
+       "decir": "Se cuenta por persona: si un día vienes con tu alt, también te cuenta, porque la web sabe que ese alt es tuyo."},
+      {"id": "a3", "texto": "Solo cuenta la de las bandas de 25, y no cuenta si en el grupo hay menos de 10 personas. En «Progresión» ves la asistencia de cada jugador y la fila de las marcas: quién va primero y por qué.",
+       "decir": "Solo cuenta la de las bandas de veinticinco, y no cuenta si en el grupo hay menos de diez personas. En progresión, ves la asistencia de cada jugador, y la fila de las marcas: quién va primero, y por qué."}
+    ]},
+    {"id": "resumen", "titulo": "Resumen", "cues": [
+      {"id": "s1", "texto": "Resumen. Entra a la web con Discord.",
+       "decir": "Resumen. Entra a la web con Díscord."},
+      {"id": "s2", "texto": "Registra tu principal y «Mis personajes».",
+       "decir": "Registra tu principal, y mis personajes."},
+      {"id": "s3", "texto": "Pide tu lugar en una core.",
+       "decir": "Pide tu lugar en una cor."},
+      {"id": "s4", "texto": "Instala SoftReserve335, que es obligatorio, y BisTooltip.",
+       "decir": "Instala Soft Riserv, tres, tres, cinco, que es obligatorio, y Bis Túltip."},
+      {"id": "s5", "texto": "Y reserva antes de cada banda.",
+       "decir": "Y reserva, antes de cada banda."},
+      {"id": "s6", "texto": "Sin SoftReserve no ves los avisos, no puedes tirar con los botones y tu asistencia no se registra: pierdes tu lugar en la rotación.",
+       "decir": "Sin Soft Riserv, no ves los avisos, no puedes tirar con los botones, y tu asistencia no se registra: pierdes tu lugar en la rotación."}
+    ]},
+    {"id": "cierre", "titulo": "Cierre", "cues": [
+      {"id": "c1", "texto": "Regístrate, prepárate… y nos vemos en TBC.",
+       "decir": "Regístrate, prepárate... y nos vemos en te be ce."},
+      {"id": "c2", "texto": "Pacto Oscuro.",
+       "decir": "Pacto Oscuro."}
+    ]}
+  ]
+}

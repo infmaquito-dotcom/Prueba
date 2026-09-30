@@ -1,0 +1,268 @@
+1
+00:00:04,000 --> 00:00:06,126
+El 3 de octubre llega TBC.
+
+2
+00:00:06,726 --> 00:00:11,066
+Nueva expansión, nuevas bandas… y una forma justa de repartir el botín.
+
+3
+00:00:13,866 --> 00:00:18,125
+Veinticinco jugadores en la banda… y el jefe suelta muy pocos objetos.
+
+4
+00:00:18,725 --> 00:00:25,629
+Repartir a mano es lento, y llegan las dudas: «¿por qué se lo llevó él?», «yo vine a todas las raids», «él ya tiene tres cosas».
+
+5
+00:00:26,229 --> 00:00:32,343
+Por eso la hermandad creó sus propias herramientas: para que todo sea justo, claro y visible para todos.
+
+6
+00:00:34,743 --> 00:00:37,168
+Son tres piezas que trabajan juntas.
+
+7
+00:00:37,768 --> 00:00:42,518
+La página web de la hermandad: softres.xdataplusx.com
+
+8
+00:00:43,118 --> 00:00:47,718
+El addon SoftReserve335, que reparte el botín dentro del juego.
+
+9
+00:00:48,318 --> 00:00:53,665
+Y el addon BisTooltip: una guía que te dice qué objetos son los mejores para tu personaje.
+
+10
+00:00:54,265 --> 00:01:02,172
+Un addon es un pequeño programa que se instala dentro del juego, copiando una carpeta en la carpeta de addons. Es gratis y está permitido.
+
+11
+00:01:02,772 --> 00:01:07,330
+En resumen: la web te registra, BisTooltip te guía y SoftReserve reparte.
+
+12
+00:01:09,730 --> 00:01:15,310
+Paso uno: regístrate en la web. La portada es pública: explica quiénes somos y cómo entrar.
+
+13
+00:01:15,910 --> 00:01:21,492
+Entras con tu cuenta de Discord. Lo que puedes ver depende de tu rol en el Discord de la hermandad.
+
+14
+00:01:22,092 --> 00:01:27,141
+Lo primero que te pide es tu personaje principal de TBC: nombre, clase y spec.
+
+15
+00:01:27,741 --> 00:01:35,114
+Si no vas a raidear en TBC, pulsa «No voy a raidear en TBC». También es una respuesta válida. Sin contestar, no se entra.
+
+16
+00:01:35,714 --> 00:01:41,126
+Luego viene lo más importante: «Mis personajes». Aquí declaras tu principal y tus alts.
+
+17
+00:01:41,726 --> 00:01:48,353
+La clase y la spec son obligatorias: un personaje sin ellas está apuntado, pero no existe para el reparto.
+
+18
+00:01:48,953 --> 00:01:55,785
+Tu principal no lo puedes cambiar tú, solo un oficial. Así nadie se cambia de principal para colarse en la fila.
+
+19
+00:01:56,385 --> 00:02:04,163
+Debajo de cada personaje apuntas sus profesiones. La lista de profesiones la ve toda la hermandad, para saber a quién pedirle algo.
+
+20
+00:02:04,763 --> 00:02:08,361
+Recuerda: sin registro no hay core. Y sin core, no hay rotación.
+
+21
+00:02:10,761 --> 00:02:20,149
+Una core es el equipo fijo de 25 personas que raidea junto cada semana. La hermandad tiene dos cores, igual de competitivas: solo cambia el horario.
+
+22
+00:02:20,749 --> 00:02:30,406
+La página Cores muestra cada una como una formación de banda: quién ocupa cada puesto, cuántos tanques, sanadores y dps hay, y qué buffos aporta cada clase.
+
+23
+00:02:31,006 --> 00:02:36,147
+Un oficial arma la lista oficial de cada core y dice quién es tanque y quién es sanador.
+
+24
+00:02:36,747 --> 00:02:47,487
+Para entrar en la rotación de marcas tienes que estar en una core. Y para estar en una core: entra con Discord, registra tu principal de TBC y completa «Mis personajes» con clase y spec.
+
+25
+00:02:48,087 --> 00:02:52,026
+Si no estás registrado, el sistema no te ve… y no te toca turno.
+
+26
+00:02:54,426 --> 00:03:01,564
+Paso dos: elige con BisTooltip. BiS significa «Best in Slot»: el mejor objeto posible para cada parte de tu equipo.
+
+27
+00:03:02,164 --> 00:03:10,779
+Pasas el ratón por cualquier objeto, y el recuadro de información te dice para qué clases y specs es de los mejores, y en qué puesto de la lista está.
+
+28
+00:03:11,379 --> 00:03:20,699
+Su ventana tiene las listas completas por clase, spec y fase. Se abre con clic izquierdo en su botón junto al minimapa, o escribiendo /bistooltip.
+
+29
+00:03:21,299 --> 00:03:29,824
+Cada parte del equipo muestra hasta 6 opciones, de la mejor a la alternativa. Y al pasar el ratón por una, te dice de qué banda y de qué jefe sale.
+
+30
+00:03:30,424 --> 00:03:36,001
+Para TBC, haz clic derecho en el botón y, en sus opciones, elige la fuente «The Burning Crusade».
+
+31
+00:03:36,601 --> 00:03:41,970
+Ojo: las listas son una referencia. El servidor puede cambiar estadísticas o botín.
+
+32
+00:03:44,370 --> 00:03:49,907
+Paso tres: reserva en la web. Antes de cada banda, un oficial comparte el enlace de la raid.
+
+33
+00:03:50,507 --> 00:03:58,158
+Entras, eliges tu personaje y reservas los objetos que quieres. Normalmente, uno por persona: el oficial decide cuántos.
+
+34
+00:03:58,758 --> 00:04:07,241
+Reserva lo que te recomendó BisTooltip: así no gastas tu reserva en algo que no te sirve. Esas reservas luego se cargan en el addon del juego.
+
+35
+00:04:09,641 --> 00:04:14,604
+Ya en la banda, cae un objeto. SoftReserve335 es obligatorio para todos los que van.
+
+36
+00:04:15,204 --> 00:04:19,314
+Si alguien lo reservó en la web, solo tiran dados quienes lo reservaron.
+
+37
+00:04:19,914 --> 00:04:27,432
+Si nadie lo reservó, se tira por MS: necesidad principal. El objeto sirve para tu papel principal, y tiene prioridad.
+
+38
+00:04:28,032 --> 00:04:33,422
+OS: necesidad secundaria. Te sirve para un papel de reserva, y va después de MS.
+
+39
+00:04:34,022 --> 00:04:37,193
+Y PASS: no lo quieres. Pasar también queda registrado.
+
+40
+00:04:37,793 --> 00:04:46,575
+Al caer el objeto, te aparece un aviso con esos botones. Pulsas uno, y el addon tira el dado por ti. Atento a la cuenta atrás: tienes unos segundos.
+
+41
+00:04:48,975 --> 00:04:58,031
+¿Quién gana? Cada vez que alguien gana un objeto por MS, se le suma un +1. Quien lleva menos +1 tiene prioridad. Ganar por reserva no suma.
+
+42
+00:04:58,631 --> 00:05:06,517
+La regla del orden: primero, reservas y MS, antes que OS. Luego gana quien lleve menos +1. Y al final decide el dado.
+
+43
+00:05:07,117 --> 00:05:12,635
+Mira: Kharion saca 99 y lleva dos +1. Veltra saca 12 y lleva cero.
+
+44
+00:05:13,235 --> 00:05:16,425
+Gana Veltra. No es un robo: llevaba menos +1.
+
+45
+00:05:17,025 --> 00:05:25,060
+Y cualquiera puede comprobarlo: desde el aviso abres la misma lista que ve el maestro despojador, con la regla del orden escrita al pie.
+
+46
+00:05:27,460 --> 00:05:31,314
+Cuando ganas, toda la banda lo ve: quién ganó, con qué dado y por qué.
+
+47
+00:05:31,914 --> 00:05:37,770
+El addon te dice a quién acercarte. Sobre esa persona aparece un diamante mientras te deba algo.
+
+48
+00:05:38,370 --> 00:05:48,261
+Si el objeto sigue en el cuerpo del jefe o en el cofre, te llega directo a la bolsa. Y en la web queda el historial: qué se llevó cada jugador, cuándo y contra cuántos compitió.
+
+49
+00:05:50,661 --> 00:05:57,139
+Ahora, las marcas de conjunto: algunos jefes las sueltan, y se canjean por piezas de armadura de conjunto.
+
+50
+00:05:57,739 --> 00:06:02,702
+En TBC, la rotación solo existe en Gruul y Magtheridon, las bandas de 25.
+
+51
+00:06:03,302 --> 00:06:08,028
+En Karazhan no hay rotación: todo se reserva, y se tira MS antes que OS.
+
+52
+00:06:08,628 --> 00:06:15,085
+El orden es estricto: primero los tanques, luego los sanadores y luego los dps. Nadie se salta el turno.
+
+53
+00:06:15,685 --> 00:06:24,680
+Entre los dps manda la asistencia: quien vino a más raids va primero. Solo si hay empate exacto se tiran dados. Premiamos a los más dedicados.
+
+54
+00:06:25,280 --> 00:06:30,179
+Va por rondas: nadie repite marca hasta que todos los de su grupo tengan una.
+
+55
+00:06:30,779 --> 00:06:36,894
+Los suplentes entran en la rotación desde su segunda raid con la core, una semana después de la primera.
+
+56
+00:06:37,494 --> 00:06:42,649
+Y los alts salen al final de la fila, marcados, y nunca pasan por delante de un principal.
+
+57
+00:06:45,049 --> 00:06:52,060
+El addon anota quién estuvo en cada jefe derrotado. Esa asistencia se sube a la web y decide tu lugar en la rotación.
+
+58
+00:06:52,660 --> 00:06:59,095
+Se cuenta por persona: si un día vienes con tu alt, también te cuenta, porque la web sabe que ese alt es tuyo.
+
+59
+00:06:59,695 --> 00:07:11,122
+Solo cuenta la de las bandas de 25, y no cuenta si en el grupo hay menos de 10 personas. En «Progresión» ves la asistencia de cada jugador y la fila de las marcas: quién va primero y por qué.
+
+60
+00:07:13,522 --> 00:07:15,669
+Resumen. Entra a la web con Discord.
+
+61
+00:07:16,269 --> 00:07:18,843
+Registra tu principal y «Mis personajes».
+
+62
+00:07:19,443 --> 00:07:21,113
+Pide tu lugar en una core.
+
+63
+00:07:21,713 --> 00:07:26,031
+Instala SoftReserve335, que es obligatorio, y BisTooltip.
+
+64
+00:07:26,631 --> 00:07:28,799
+Y reserva antes de cada banda.
+
+65
+00:07:29,399 --> 00:07:37,370
+Sin SoftReserve no ves los avisos, no puedes tirar con los botones y tu asistencia no se registra: pierdes tu lugar en la rotación.
+
+66
+00:07:39,770 --> 00:07:42,728
+Regístrate, prepárate… y nos vemos en TBC.
+
+67
+00:07:43,328 --> 00:07:44,378
+Pacto Oscuro.
+
