@@ -9,11 +9,13 @@ Salidas (en la carpeta indicada):
 import json, sys, os
 import numpy as np
 import soundfile as sf
-from kokoro_onnx import Kokoro
+from scipy.signal import resample_poly
 
 MODEL_DIR = os.environ.get("KOKORO_DIR", "/tmp/claude-0/tts")
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SALIDA = sys.argv[1] if len(sys.argv) > 1 else os.path.join(RAIZ, "build")
+# si existe voz_xtts/<id>.wav se usa esa voz en lugar de la sintética
+VOZ_PROPIA = os.environ.get("VOZ_PROPIA", os.path.join(RAIZ, "voz_xtts"))
 
 SR = 24000
 PAUSA_FRASE = 0.6      # silencio entre frases de una misma escena
@@ -44,7 +46,7 @@ def main():
     with open(os.path.join(RAIZ, "narracion.json"), encoding="utf-8") as f:
         guion = json.load(f)
     os.makedirs(os.path.join(SALIDA, "voz"), exist_ok=True)
-    k = Kokoro(os.path.join(MODEL_DIR, "kokoro-v1.0.onnx"), os.path.join(MODEL_DIR, "voices-v1.0.bin"))
+    k = None
 
     t = 0.0
     escenas, pistas, srt = [], [], []
@@ -54,9 +56,23 @@ def main():
         cues = []
         for i, c in enumerate(esc["cues"]):
             ruta = os.path.join(SALIDA, "voz", c["id"] + ".wav")
-            if os.path.exists(ruta) and os.environ.get("REHACER") != "1":
+            propia = os.path.join(VOZ_PROPIA, c["id"] + ".wav")
+            if os.path.exists(propia):
+                # narración grabada/clonada con herramientas/voz_xtts.py
+                s, sr = sf.read(propia, dtype="float32")
+                if s.ndim > 1:
+                    s = s.mean(axis=1)
+                if sr != SR:
+                    s = resample_poly(s, SR, sr).astype(np.float32)
+                s = recortar(s)
+                s *= 0.8 / max(1e-6, np.abs(s).max())
+                sf.write(ruta, s, SR)
+            elif os.path.exists(ruta) and os.environ.get("REHACER") != "1":
                 s, _ = sf.read(ruta, dtype="float32")
             else:
+                if k is None:
+                    from kokoro_onnx import Kokoro
+                    k = Kokoro(os.path.join(MODEL_DIR, "kokoro-v1.0.onnx"), os.path.join(MODEL_DIR, "voices-v1.0.bin"))
                 s, sr = k.create(c["decir"], voice=guion["voz"], speed=guion["velocidad"], lang="es-419")
                 assert sr == SR
                 s = recortar(s)
