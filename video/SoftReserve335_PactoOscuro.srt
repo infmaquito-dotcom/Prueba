@@ -1,0 +1,156 @@
+1
+00:00:03,200 --> 00:00:09,507
+¿Alguna vez cayó el jefe, brilló el botín… y no supiste por qué otro se llevó el objeto que tú querías?
+
+2
+00:00:10,207 --> 00:00:12,039
+Compañero: eso se acabó.
+
+3
+00:00:14,639 --> 00:00:19,747
+Piénsalo: cuarenta jugadores en la raid… y el jefe suelta tres o cuatro objetos.
+
+4
+00:00:20,447 --> 00:00:25,666
+Repartir así, a mano, es lento. Y siempre termina igual: discusiones en el chat.
+
+5
+00:00:26,366 --> 00:00:29,004
+Sin reglas claras, la gente desconfía.
+
+6
+00:00:31,404 --> 00:00:35,472
+Por eso, la propia hermandad creó SoftReserve335.
+
+7
+00:00:36,172 --> 00:00:42,539
+Es un addon: un pequeño programa que se instala dentro del juego, copiando una carpeta. Gratis y legal.
+
+8
+00:00:43,239 --> 00:00:47,664
+Justo, transparente… y desde ahora, obligatorio para todos en la raid.
+
+9
+00:00:50,064 --> 00:00:57,074
+Todo empieza antes de la raid. Entras a la web de la hermandad: softres.xdataplusx.com
+
+10
+00:00:57,774 --> 00:01:03,996
+Y reservas los objetos que más quieres. Es como decir: «si cae esto, lo pido yo». Esa es tu RESERVA.
+
+11
+00:01:04,696 --> 00:01:09,125
+Antes de empezar, el maestro despojador carga esas reservas en el addon.
+
+12
+00:01:09,825 --> 00:01:14,404
+Y cuando cae un objeto reservado, solo tiran dados quienes lo reservaron.
+
+13
+00:01:16,804 --> 00:01:22,564
+Cae el jefe, cae un objeto… y a cada jugador le aparece un aviso en pantalla, con botones.
+
+14
+00:01:23,264 --> 00:01:31,965
+Si nadie reservó ese objeto, eliges. MS: necesidad principal. Sirve para el papel principal de tu personaje, y tiene prioridad.
+
+15
+00:01:32,665 --> 00:01:39,271
+OS: necesidad secundaria. Te sirve para un papel secundario o de reserva, y va después de MS.
+
+16
+00:01:39,971 --> 00:01:44,721
+Y PASS: no lo quieres. Ojo: pasar también se registra. No es quedarse callado.
+
+17
+00:01:45,421 --> 00:01:49,319
+Pulsas MS, OS o Pass… y el addon tira el dado por ti.
+
+18
+00:01:50,019 --> 00:01:53,553
+Atento a la cuenta atrás: tienes unos segundos para tirar.
+
+19
+00:01:55,953 --> 00:02:02,386
+¿Y quién gana? Aquí entra el +1. Cada vez que alguien gana un objeto por MS, se le suma un +1.
+
+20
+00:02:03,086 --> 00:02:11,063
+Quien lleva menos +1 tiene prioridad. Así el botín se reparte entre todos. Y ojo: ganar por reserva no suma +1.
+
+21
+00:02:11,763 --> 00:02:20,439
+La regla del orden: primero, reservas y MS, antes que OS. Luego gana quien lleve menos +1. Y solo al final decide el dado.
+
+22
+00:02:21,139 --> 00:02:26,932
+Mira: Kharion saca 99, pero lleva dos +1. Veltra saca 12, y lleva cero.
+
+23
+00:02:27,632 --> 00:02:31,294
+Gana Veltra. No es un robo: es que llevaba menos +1.
+
+24
+00:02:31,994 --> 00:02:38,173
+Y cualquiera puede comprobarlo: desde el aviso abres la misma lista que ve el maestro despojador.
+
+25
+00:02:38,873 --> 00:02:45,820
+Nombres, dados, +1, si tiró MS u OS, y quién pasó. Al pie, la regla del orden. Nada queda oculto.
+
+26
+00:02:48,220 --> 00:02:53,513
+Cuando ganas, toda la raid lo ve: un aviso grande dice quién ganó, con qué dado y por qué.
+
+27
+00:02:54,213 --> 00:03:01,715
+El addon te dice a quién acercarte para recibir el objeto. Sobre esa persona aparece un diamante, mientras te deba algo.
+
+28
+00:03:02,415 --> 00:03:08,039
+Y si el objeto todavía está en el cuerpo del jefe o en el cofre, te llega directo a la bolsa.
+
+29
+00:03:10,439 --> 00:03:16,422
+Ahora, las marcas de conjunto. En Naxxramas caen marcas que se canjean por piezas de armadura.
+
+30
+00:03:17,122 --> 00:03:23,386
+Estas no van a dados: van por TURNOS, como una fila. Tu turno depende de tu asistencia a las raids.
+
+31
+00:03:24,086 --> 00:03:28,657
+Quien recibe una marca pasa al final de la fila. Nadie pierde su lugar.
+
+32
+00:03:29,357 --> 00:03:37,179
+Si a alguien le toca una pieza que ya tiene, el addon avisa antes de entregarla… y esa persona conserva su turno para la próxima.
+
+33
+00:03:37,879 --> 00:03:44,776
+Y si tienes un personaje secundario, un alt, el addon lo sabe: un alt nunca pasa por delante del principal.
+
+34
+00:03:47,176 --> 00:03:50,938
+El addon anota quién estuvo presente en cada jefe derrotado.
+
+35
+00:03:51,638 --> 00:03:59,695
+Esa asistencia se sube a la web, y cuenta para tu historial y tu turno. Eso sí: con menos de 10 personas en el grupo, no cuenta.
+
+36
+00:04:02,095 --> 00:04:11,768
+Por eso es obligatorio: sin el addon no ves los avisos, no puedes tirar desde los botones, y tu asistencia no queda registrada. Pierdes tu lugar en la fila.
+
+37
+00:04:12,468 --> 00:04:15,781
+Los fallos que reportó la hermandad ya se corrigieron.
+
+38
+00:04:16,481 --> 00:04:20,121
+Instala el addon, reserva en la web… y nos vemos en Naxxramas.
+
+39
+00:04:20,821 --> 00:04:21,990
+Pacto Oscuro.
+

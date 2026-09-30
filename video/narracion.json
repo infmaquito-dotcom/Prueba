@@ -1,0 +1,261 @@
+{
+  "voz": "em_alex",
+  "velocidad": 0.88,
+  "escenas": [
+    {
+      "id": "gancho",
+      "titulo": "Gancho",
+      "cues": [
+        {
+          "id": "g1",
+          "texto": "¿Alguna vez cayó el jefe, brilló el botín… y no supiste por qué otro se llevó el objeto que tú querías?",
+          "decir": "¿Alguna vez cayó el jefe, brilló el botín... y no supiste por qué otro se llevó el objeto que tú querías?"
+        },
+        {
+          "id": "g2",
+          "texto": "Compañero: eso se acabó.",
+          "decir": "Compañero: eso se acabó."
+        }
+      ]
+    },
+    {
+      "id": "problema",
+      "titulo": "El problema",
+      "cues": [
+        {
+          "id": "p1",
+          "texto": "Piénsalo: cuarenta jugadores en la raid… y el jefe suelta tres o cuatro objetos.",
+          "decir": "Piénsalo: cuarenta jugadores en la reid... y el jefe suelta tres o cuatro objetos."
+        },
+        {
+          "id": "p2",
+          "texto": "Repartir así, a mano, es lento. Y siempre termina igual: discusiones en el chat.",
+          "decir": "Repartir así, a mano, es lento. Y siempre termina igual: discusiones en el chat."
+        },
+        {
+          "id": "p3",
+          "texto": "Sin reglas claras, la gente desconfía.",
+          "decir": "Sin reglas claras, la gente desconfía."
+        }
+      ]
+    },
+    {
+      "id": "solucion",
+      "titulo": "La solución",
+      "cues": [
+        {
+          "id": "s1",
+          "texto": "Por eso, la propia hermandad creó SoftReserve335.",
+          "decir": "Por eso, la propia hermandad creó Soft Riserv, tres, tres, cinco."
+        },
+        {
+          "id": "s2",
+          "texto": "Es un addon: un pequeño programa que se instala dentro del juego, copiando una carpeta. Gratis y legal.",
+          "decir": "Es un ádon: un pequeño programa que se instala dentro del juego, copiando una carpeta. Gratis, y legal."
+        },
+        {
+          "id": "s3",
+          "texto": "Justo, transparente… y desde ahora, obligatorio para todos en la raid.",
+          "decir": "Justo, transparente... y desde ahora, obligatorio para todos en la reid."
+        }
+      ]
+    },
+    {
+      "id": "reserva",
+      "titulo": "Antes de la raid",
+      "cues": [
+        {
+          "id": "r1",
+          "texto": "Todo empieza antes de la raid. Entras a la web de la hermandad: softres.xdataplusx.com",
+          "decir": "Todo empieza antes de la reid. Entras a la web de la hermandad: sóft res, punto, equis data plus equis, punto com."
+        },
+        {
+          "id": "r2",
+          "texto": "Y reservas los objetos que más quieres. Es como decir: «si cae esto, lo pido yo». Esa es tu RESERVA.",
+          "decir": "Y reservas los objetos que más quieres. Es como decir: si cae esto, lo pido yo. Esa es tu reserva."
+        },
+        {
+          "id": "r3",
+          "texto": "Antes de empezar, el maestro despojador carga esas reservas en el addon.",
+          "decir": "Antes de empezar, el maestro despojador carga esas reservas en el ádon."
+        },
+        {
+          "id": "r4",
+          "texto": "Y cuando cae un objeto reservado, solo tiran dados quienes lo reservaron.",
+          "decir": "Y cuando cae un objeto reservado, solo tiran dados quienes lo reservaron."
+        }
+      ]
+    },
+    {
+      "id": "objeto",
+      "titulo": "Cae un objeto",
+      "cues": [
+        {
+          "id": "o1",
+          "texto": "Cae el jefe, cae un objeto… y a cada jugador le aparece un aviso en pantalla, con botones.",
+          "decir": "Cae el jefe, cae un objeto... y a cada jugador le aparece un aviso en pantalla, con botones."
+        },
+        {
+          "id": "o2",
+          "texto": "Si nadie reservó ese objeto, eliges. MS: necesidad principal. Sirve para el papel principal de tu personaje, y tiene prioridad.",
+          "decir": "Si nadie reservó ese objeto, eliges. Eme ese: necesidad principal. Sirve para el papel principal de tu personaje, y tiene prioridad."
+        },
+        {
+          "id": "o3",
+          "texto": "OS: necesidad secundaria. Te sirve para un papel secundario o de reserva, y va después de MS.",
+          "decir": "O ese: necesidad secundaria. Te sirve para un papel secundario o de reserva, y va después de eme ese."
+        },
+        {
+          "id": "o4",
+          "texto": "Y PASS: no lo quieres. Ojo: pasar también se registra. No es quedarse callado.",
+          "decir": "Y pas: no lo quieres. Ojo: pasar también se registra. No es quedarse callado."
+        },
+        {
+          "id": "o5",
+          "texto": "Pulsas MS, OS o Pass… y el addon tira el dado por ti.",
+          "decir": "Pulsas eme ese, o ese, o pas... y el ádon tira el dado por ti."
+        },
+        {
+          "id": "o6",
+          "texto": "Atento a la cuenta atrás: tienes unos segundos para tirar.",
+          "decir": "Atento a la cuenta atrás: tienes unos segundos para tirar."
+        }
+      ]
+    },
+    {
+      "id": "gana",
+      "titulo": "Quién gana",
+      "cues": [
+        {
+          "id": "w1",
+          "texto": "¿Y quién gana? Aquí entra el +1. Cada vez que alguien gana un objeto por MS, se le suma un +1.",
+          "decir": "¿Y quién gana? Aquí entra el más uno. Cada vez que alguien gana un objeto por eme ese, se le suma un más uno."
+        },
+        {
+          "id": "w2",
+          "texto": "Quien lleva menos +1 tiene prioridad. Así el botín se reparte entre todos. Y ojo: ganar por reserva no suma +1.",
+          "decir": "Quien lleva menos más unos, tiene prioridad. Así el botín se reparte entre todos. Y ojo: ganar por reserva, no suma más uno."
+        },
+        {
+          "id": "w3",
+          "texto": "La regla del orden: primero, reservas y MS, antes que OS. Luego gana quien lleve menos +1. Y solo al final decide el dado.",
+          "decir": "La regla del orden: primero, reservas y eme ese, antes que o ese. Luego, gana quien lleve menos más unos. Y solo al final, decide el dado."
+        },
+        {
+          "id": "w4",
+          "texto": "Mira: Kharion saca 99, pero lleva dos +1. Veltra saca 12, y lleva cero.",
+          "decir": "Mira: Kárion saca noventa y nueve, pero lleva dos más unos. Veltra saca doce, y lleva cero."
+        },
+        {
+          "id": "w5",
+          "texto": "Gana Veltra. No es un robo: es que llevaba menos +1.",
+          "decir": "Gana Veltra. No es un robo: es que llevaba menos más unos."
+        },
+        {
+          "id": "w6",
+          "texto": "Y cualquiera puede comprobarlo: desde el aviso abres la misma lista que ve el maestro despojador.",
+          "decir": "Y cualquiera puede comprobarlo: desde el aviso, abres la misma lista que ve el maestro despojador."
+        },
+        {
+          "id": "w7",
+          "texto": "Nombres, dados, +1, si tiró MS u OS, y quién pasó. Al pie, la regla del orden. Nada queda oculto.",
+          "decir": "Nombres, dados, más unos, si tiró eme ese u o ese, y quién pasó. Al pie, la regla del orden. Nada queda oculto."
+        }
+      ]
+    },
+    {
+      "id": "recibir",
+      "titulo": "Recibir el objeto",
+      "cues": [
+        {
+          "id": "e1",
+          "texto": "Cuando ganas, toda la raid lo ve: un aviso grande dice quién ganó, con qué dado y por qué.",
+          "decir": "Cuando ganas, toda la reid lo ve: un aviso grande dice quién ganó, con qué dado, y por qué."
+        },
+        {
+          "id": "e2",
+          "texto": "El addon te dice a quién acercarte para recibir el objeto. Sobre esa persona aparece un diamante, mientras te deba algo.",
+          "decir": "El ádon te dice a quién acercarte para recibir el objeto. Sobre esa persona aparece un diamante, mientras te deba algo."
+        },
+        {
+          "id": "e3",
+          "texto": "Y si el objeto todavía está en el cuerpo del jefe o en el cofre, te llega directo a la bolsa.",
+          "decir": "Y si el objeto todavía está en el cuerpo del jefe, o en el cofre, te llega directo a la bolsa."
+        }
+      ]
+    },
+    {
+      "id": "marcas",
+      "titulo": "Las marcas",
+      "cues": [
+        {
+          "id": "m1",
+          "texto": "Ahora, las marcas de conjunto. En Naxxramas caen marcas que se canjean por piezas de armadura.",
+          "decir": "Ahora, las marcas de conjunto. En Naxramas caen marcas que se canjean por piezas de armadura."
+        },
+        {
+          "id": "m2",
+          "texto": "Estas no van a dados: van por TURNOS, como una fila. Tu turno depende de tu asistencia a las raids.",
+          "decir": "Estas no van a dados: van por turnos, como una fila. Tu turno depende de tu asistencia a las reids."
+        },
+        {
+          "id": "m3",
+          "texto": "Quien recibe una marca pasa al final de la fila. Nadie pierde su lugar.",
+          "decir": "Quien recibe una marca, pasa al final de la fila. Nadie pierde su lugar."
+        },
+        {
+          "id": "m4",
+          "texto": "Si a alguien le toca una pieza que ya tiene, el addon avisa antes de entregarla… y esa persona conserva su turno para la próxima.",
+          "decir": "Si a alguien le toca una pieza que ya tiene, el ádon avisa antes de entregarla... y esa persona conserva su turno para la próxima."
+        },
+        {
+          "id": "m5",
+          "texto": "Y si tienes un personaje secundario, un alt, el addon lo sabe: un alt nunca pasa por delante del principal.",
+          "decir": "Y si tienes un personaje secundario, un alt, el ádon lo sabe: un alt nunca pasa por delante del principal."
+        }
+      ]
+    },
+    {
+      "id": "asistencia",
+      "titulo": "Asistencia",
+      "cues": [
+        {
+          "id": "a1",
+          "texto": "El addon anota quién estuvo presente en cada jefe derrotado.",
+          "decir": "El ádon anota quién estuvo presente en cada jefe derrotado."
+        },
+        {
+          "id": "a2",
+          "texto": "Esa asistencia se sube a la web, y cuenta para tu historial y tu turno. Eso sí: con menos de 10 personas en el grupo, no cuenta.",
+          "decir": "Esa asistencia se sube a la web, y cuenta para tu historial y tu turno. Eso sí: con menos de diez personas en el grupo, no cuenta."
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "titulo": "Cierre",
+      "cues": [
+        {
+          "id": "c1",
+          "texto": "Por eso es obligatorio: sin el addon no ves los avisos, no puedes tirar desde los botones, y tu asistencia no queda registrada. Pierdes tu lugar en la fila.",
+          "decir": "Por eso es obligatorio: sin el ádon no ves los avisos, no puedes tirar desde los botones, y tu asistencia no queda registrada. Pierdes tu lugar en la fila."
+        },
+        {
+          "id": "c2",
+          "texto": "Los fallos que reportó la hermandad ya se corrigieron.",
+          "decir": "Los fallos que reportó la hermandad, ya se corrigieron."
+        },
+        {
+          "id": "c3",
+          "texto": "Instala el addon, reserva en la web… y nos vemos en Naxxramas.",
+          "decir": "Instala el ádon, reserva en la web... y nos vemos en Naxramas."
+        },
+        {
+          "id": "c4",
+          "texto": "Pacto Oscuro.",
+          "decir": "Pacto Oscuro."
+        }
+      ]
+    }
+  ]
+}
