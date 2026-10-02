@@ -91,14 +91,17 @@ def item_stats(it):
 
 
 # vector de estadísticas de wowsims/wotlk -> claves propias (para bonificaciones de ranura)
-WS = {0: "STR", 1: "AGI", 2: "STA", 3: "INT", 4: "SPI", 5: "SP", 6: "MP5", 7: "HIT", 8: "CRIT", 9: "HASTE", 11: "AP",
+WS = {0: "STR", 1: "AGI", 2: "STA", 3: "INT", 4: "SPI", 5: "SP", 6: "MP5", 7: "HIT", 8: "CRIT", 9: "HASTE", 11: "AP", 21: "RAP",
       12: "HIT", 13: "CRIT", 14: "HASTE", 15: "ARP", 16: "EXP", 20: "ARMOR", 22: "DEF", 23: "BLOCK", 24: "BLOCKV",
       25: "DODGE", 26: "PARRY", 27: "RES", 28: "HEALTH"}
 
 
 def ws_vec(vec):
     out = {}
-    for i, v in enumerate(vec or []):
+    vec = list(vec or [])
+    if len(vec) > 21 and vec[21] and vec[21] == vec[11]:
+        vec[21] = 0   # en 3.3.5a el poder de ataque ya cuenta para cuerpo a cuerpo y a distancia
+    for i, v in enumerate(vec):
         if v and i in WS:
             k = WS[i]
             out[k] = max(out.get(k, 0), v)  # golpe/crítico/celeridad salen dos veces (hechizo y cuerpo a cuerpo)

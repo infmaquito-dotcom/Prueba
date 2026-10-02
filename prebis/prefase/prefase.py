@@ -19,7 +19,7 @@ import modelo
 from modelo import item_stats, ws_vec, score, effects, equip_stats, ES
 from ac_index import Index, MAPS
 from fuentes import Fuentes, SLOT_INV, load_tooltips
-from specs import SPECS, CLASS, GEM_LIST, METAS, GLYPHS, ENCHANT_EXTRA, MANUAL_VALUES
+from specs import SPECS, CLASS, GEM_LIST, METAS, GLYPHS, ENCHANT_EXTRA, MANUAL_VALUES, RELICS
 
 SLOT_ORDER = ["Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Finger",
               "Trinket", "Weapon", "Off hand", "Relic", "Ranged"]
@@ -34,6 +34,7 @@ FITS = {2: {"R"}, 4: {"Y"}, 8: {"B"}}  # color de ranura de item_template -> col
 COLORS = {"R": {"R"}, "Y": {"Y"}, "B": {"B"}, "O": {"R", "Y"}, "P": {"R", "B"}, "G": {"Y", "B"}}
 
 
+BONUS_ARMOR_INV = {2, 11, 12, 13, 14, 15, 17, 21, 22, 23, 25, 26, 28}
 WS_ENCHANTS = json.loads(Path("/tmp/claude-0/wswotlk/assets/database/db.json").read_text())["enchants"]
 
 
@@ -94,7 +95,7 @@ class Builder:
             inv = it["InventoryType"]
             if inv in (1, 3, 5, 20, 6, 7, 8, 9, 10) and sub not in c["armor"]:
                 return False
-            if inv == 14 and sub == 6 and "shield" not in kind:  # escudo
+            if inv == 14 and sub == 6 and "shield" not in (kind.get("off") or ()):  # escudo
                 return False
             if inv == 28 and sub != c.get("relic"):
                 return False
@@ -147,9 +148,11 @@ class Builder:
         bonus = score(self.bonus.get(it["socketBonus"], {}), w)
         return max(free, matched + bonus), socks
 
-    def evaluate(self, e, sp, w, best, meta_val):
+    def evaluate(self, e, sp, w, best, meta_val, slot=None):
         it = self.ix.items[e]
         st = item_stats(it)
+        if "ARMOR" in st and it["InventoryType"] in BONUS_ARMOR_INV:  # armadura adicional (anillos, armas, abalorios...)
+            st["BARMOR"] = st.pop("ARMOR")
         for k, v in equip_stats(self.tt.get(e, "")).items():  # hechizos de equipar que AzerothCore no guarda como estadística
             if v > st.get(k, 0):
                 st[k] = v
@@ -159,8 +162,8 @@ class Builder:
         notes = []
         kind = self.weapon_kind(it)
         if dps:
-            wkey = "OH" if kind == "oh" or sp.get("oh_slot") == "dw_oh" else "RANGED" if kind == "ranged" else "MH"
-            v += dps * w.get(wkey, w.get("MH", 0))
+            wkey = {"Off hand": "OH", "Ranged": "RANGED"}.get(slot, "MH")
+            v += dps * w.get(wkey, 0)
         sv, socks = self.socket_value(it, w, best, meta_val)
         v += sv
         if e in MANUAL_VALUES.get(sp["key"], {}):
@@ -175,7 +178,7 @@ class Builder:
 
     # ---------- elección por hueco ----------
     def candidates(self, sp, slot, badge):
-        key = (sp["key"], slot, badge)
+        key = (sp["key"], slot, badge, tuple(sp["weapons"].get("main", ())), tuple(sp["weapons"].get("off") or ()))
         if key not in self._cands:
             self._cands[key] = [x for x in self._cands_raw(sp, slot, badge)]
         return self._cands[key]
@@ -184,7 +187,12 @@ class Builder:
         out, seen = [], set()
         for e, s, ok, bad, badge_only in self.candidates(sp, slot, badge):
             it = self.ix.items[e]
-            v, st, dps, socks, notes = self.evaluate(e, sp, w, best, meta_val)
+            v, st, dps, socks, notes = self.evaluate(e, sp, w, best, meta_val, slot)
+            if slot == "Relic" and v <= 0 and sp["key"] in RELICS:
+                continue
+            if slot == "Relic" and v <= 0:
+                notes = notes + ["efecto de reliquia no valorado: se ordena por nivel de objeto"]
+                v = it["ItemLevel"] / 1000
             if v <= 0 or it["name"] in seen:
                 continue
             seen.add(it["name"])
@@ -204,8 +212,13 @@ class Builder:
             if slot == "Weapon":
                 if s not in ("Weapon",) or kind not in sp["weapons"]["main"]:
                     continue
+                if sp["weapons"].get("main_sub") and it["subclass"] not in sp["weapons"]["main_sub"]:
+                    continue
             elif slot == "Off hand":
-                if kind not in sp["weapons"].get("off", ()):
+                if kind not in (sp["weapons"].get("off") or ()):
+                    continue
+                if kind in ("1h", "oh", "2h") and sp["weapons"].get("off_sub") and \
+                        it["subclass"] not in sp["weapons"]["off_sub"]:
                     continue
             elif slot == "Relic":
                 if kind != "relic":
@@ -290,13 +303,24 @@ class Builder:
         out = []
         ench = WS_ENCHANTS
         for en in ench + ENCHANT_EXTRA:
-            if WS_SLOT.get(en["type"]) != slot:
+            es = WS_SLOT.get(en["type"])
+            if es == "Weapon" and slot == "Off hand" and en.get("enchantType") != 2 and \
+                    set(sp["weapons"].get("off") or ()) & {"1h", "oh", "2h"}:
+                es = "Off hand"   # arma de la mano izquierda
+            if en.get("enchantType") == 2:
+                es = "Off hand"
+            if es != slot:
                 continue
             if en.get("classAllowlist") and CLASS[sp["class"]]["ws"] not in en["classAllowlist"]:
                 continue
             if en.get("enchantType") == 1 and "2h" not in sp["weapons"]["main"]:
                 continue
-            if en.get("enchantType") in (2, 3):  # escudo / bastón
+            if en.get("enchantType") == 4:  # solo bastones
+                continue
+            if en.get("enchantType") == 2 and slot != "Off hand":  # escudo
+                continue
+            if slot == "Off hand" and en.get("enchantType") != 2 and "shield" in (sp["weapons"].get("off") or ()) \
+                    and not set(sp["weapons"]["off"]) & {"1h", "oh", "2h"}:
                 continue
             if en.get("requiredProfession"):
                 continue  # los de profesión (anillos de encantador, etc.) se tratan aparte
@@ -377,6 +401,9 @@ def adapt_weights(sp):
             calc.append(f"{ES.get(key, key)}: {v:.2f} x {k:.3f} = {w[key]:.2f}")
         else:
             w[key] = v
+    for key, (v, why) in sp.get("w70", {}).items():
+        w[key] = v
+        calc.append(f"{ES.get(key, key)}: {v:.2f} fijado a mano al 70 ({why})")
     return w, k, calc
 
 
@@ -405,23 +432,29 @@ def slot_entries(b, sp, slot, w, best, meta_val, badge):
     return out
 
 
+def cap_list(caps, sp):
+    """(estadística, tope en índice, peso que le queda pasado el tope) para esta especialización."""
+    c = sp["caps"]
+    out = []
+    if c.get("hit_kind") == "spell":
+        out.append(("HIT", caps["golpe con hechizos"]["índice"], sp.get("hit_after_cap", 0.0)))
+    elif c.get("hit_kind") == "melee":
+        out.append(("HIT", caps["golpe cuerpo a cuerpo"]["índice"], sp.get("hit_after_cap", 0.0)))
+    if c.get("exp"):
+        out.append(("EXP", caps["pericia (esquiva)"]["índice"], sp.get("exp_after_cap", 0.0)))
+    if c.get("tank"):
+        out.append(("DEF", caps["defensa (inmunidad a críticos)"]["índice"], sp.get("def_after_cap", 0.0)))
+    return out
+
+
 def capped_value(tot, w0, caps, sp):
-    """Valor real de un equipo: golpe y pericia por encima del tope valen menos (o nada)."""
-    v = 0.0
-    for k, x in tot.items():
-        if k in ("HIT", "EXP"):
-            continue
-        v += x * w0.get(k, 0)
-    hit_cap = caps["golpe cuerpo a cuerpo"]["índice"] if sp["caps"]["hit_kind"] == "melee" else caps["golpe con hechizos"]["índice"]
-    hit = tot.get("HIT", 0)
-    post = sp.get("hit_after_cap", 0.0)   # parte del peso que sigue valiendo pasado el tope (hechizos del paladín)
-    spell_cap = caps["golpe con hechizos"]["índice"]
-    v += min(hit, hit_cap) * w0.get("HIT", 0)
-    if hit > hit_cap:
-        v += (min(hit, spell_cap) - hit_cap) * post if spell_cap > hit_cap else 0
-    if "EXP" in w0:
-        exp_cap = caps["pericia (esquiva)"]["índice"]
-        v += min(tot.get("EXP", 0), exp_cap) * w0["EXP"]
+    """Valor real de un equipo: lo que pasa del tope vale el peso reducido «después del tope»."""
+    cl = cap_list(caps, sp)
+    capped = {k for k, _, _ in cl}
+    v = sum(x * w0.get(k, 0) for k, x in tot.items() if k not in capped)
+    for k, cap, post in cl:
+        x = tot.get(k, 0)
+        v += min(x, cap) * w0.get(k, 0) + max(0, x - cap) * post
     return v
 
 
@@ -471,10 +504,31 @@ def choose(b, sp, w, gems, metas, meta_val):
     return lists, chosen, plans, ench, tot, extra
 
 
+def pick_weapon_config(b, sp, w, gems, meta_val):
+    """Para quien puede elegir: compara el mejor arma de dos manos con la mejor de una mano + mano izquierda."""
+    alts = sp["weapons"].get("alternativas")
+    if not alts:
+        return sp
+    best = b.best_gems(w, gems)
+    res = []
+    for alt in alts:
+        s2 = dict(sp, weapons=dict(sp["weapons"], **alt))
+        v = sum((b.rank_slot(s2, slot, w, best, meta_val, False, 1) or [(0,)])[0][0]
+                for slot in ("Weapon", "Off hand") if slot == "Weapon" or alt.get("off"))
+        res.append((v, alt, s2))
+    res.sort(key=lambda x: -x[0])
+    s2 = res[0][2]
+    slots = [x for x in sp["slots"] if x != "Off hand" or res[0][1].get("off")]
+    s2 = dict(s2, slots=slots, config_armas=[{"armas": a["main"], "mano_izquierda": a.get("off"), "ep": round(v, 1)}
+                                              for v, a, _ in res])
+    return s2
+
+
 def build_spec(b, key):
     sp = SPECS[key]
-    w0, k, calc = adapt_weights(sp)
-    caps = modelo.caps_70(sp["caps"]["golpe_talentos"], sp["caps"]["pericia_talentos"])
+    w0, kf, calc = adapt_weights(sp)
+    caps = modelo.caps_70(sp["caps"].get("golpe_talentos", 0.0), sp["caps"].get("pericia_talentos", 0),
+                          sp["caps"].get("golpe_hechizo_talentos", 0.0))
     gems, gem_why = b.allowed_gems()
     metas = []
     for mid, m in METAS.items():
@@ -483,30 +537,38 @@ def build_spec(b, key):
             metas.append((score(m["stats"], w0) + sp.get("meta_extra", {}).get(mid, (0, ""))[0], mid, why))
     metas.sort(reverse=True)
     meta_val = metas[0][0] if metas else 0
-    # búsqueda del peso de golpe/pericia que da el mejor equipo real con los topes
+    # configuración de armas (lanzadores: bastón o arma de una mano + mano izquierda)
+    sp = pick_weapon_config(b, sp, w0, gems, meta_val)
+    # búsqueda del peso de golpe/pericia/defensa que da el mejor equipo real con los topes
+    cl = cap_list(caps, sp)
+    grids = []
+    for k, cap, post in cl:
+        if k == "HIT":
+            grids.append((k, (1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.17)))
+        else:
+            grids.append((k, (1.0, 0.6, 0.3)))
     best_run = None
     tried = []
-    for fh in (1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.17):
-        for fe in ((1.0, 0.5) if "EXP" in w0 else (1.0,)):
-            w = dict(w0)
-            if "HIT" in w:
-                w["HIT"] = round(w0["HIT"] * fh, 3)
-            if "EXP" in w:
-                w["EXP"] = round(w0["EXP"] * fe, 3)
-            run = choose(b, sp, w, gems, metas, meta_val)
-            tot, extra = run[4], run[5]
-            val = capped_value(tot, w0, caps, sp) + tot.get("MH_DPS", 0) * w0.get("MH", 0) + extra
-            tried.append({"peso_golpe": w.get("HIT"), "peso_pericia": w.get("EXP"), "golpe": tot.get("HIT", 0),
-                          "pericia": tot.get("EXP", 0), "valor_equipo": round(val, 1)})
-            if not best_run or val > best_run[0]:
-                best_run = (val, w, run)
+    for combo in itertools.product(*[g for _, g in grids]) if grids else [()]:
+        w = dict(w0)
+        for (k, _), f in zip(grids, combo):
+            if k in w:
+                w[k] = round(w0[k] * f, 3)
+        run = choose(b, sp, w, gems, metas, meta_val)
+        tot, extra = run[4], run[5]
+        val = capped_value(tot, w0, caps, sp) + tot.get("MH_DPS", 0) * w0.get("MH", 0) + extra
+        tried.append({**{f"peso_{k}": w.get(k) for k, _ in grids}, **{k: round(tot.get(k, 0)) for k, _ in grids},
+                      "valor_equipo": round(val, 1)})
+        if not best_run or val > best_run[0]:
+            best_run = (val, w, run)
     val, w, (lists, chosen, plans, ench, tot, extra) = best_run
     best = b.best_gems(w, gems)
     data = {"clase": key[0], "especializacion": key[1], "clase_es": CLASS[sp["class"]]["es"], "spec_es": sp["es"],
             "pesos": {"nivel_80_wowsims": sp["ws80"], "nivel_70": w0, "nivel_70_para_ordenar": w,
-                      "factor_indices": round(k, 3), "calculo": calc, "referencia": sp["ref"],
+                      "factor_indices": round(kf, 3), "calculo": calc, "referencia": sp["ref"],
                       "busqueda_topes": tried},
             "topes": caps, "indices_nivel_70": modelo.RATING70, "talentos": sp["talents"], "huecos": {},
+            "configuracion_armas": sp.get("config_armas"),
             "insignias": {}}
     for slot in sp["slots"]:
         data["huecos"][slot] = slot_entries(b, sp, slot, w, best, meta_val, False)

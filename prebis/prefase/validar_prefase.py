@@ -20,9 +20,10 @@ from ac_index import Index
 from fuentes import Fuentes, SLOT_INV
 from specs import SPECS, CLASS, GEM_LIST, METAS
 
+# Off hand admite armas de dos manos (17) por Agarre de titán del guerrero Furia.
 LUA_SLOT_INV = {"Head": {1}, "Neck": {2}, "Shoulder": {3}, "Back": {16}, "Chest": {5, 20}, "Wrist": {9},
                 "Hands": {10}, "Waist": {6}, "Legs": {7}, "Feet": {8}, "Finger": {11}, "Trinket": {12},
-                "Weapon": {13, 17, 21}, "Off hand": {14, 22, 23, 13}, "Relic": {28}, "Ranged": {15, 25, 26}}
+                "Weapon": {13, 17, 21}, "Off hand": {14, 22, 23, 13, 17}, "Relic": {28}, "Ranged": {15, 25, 26}}
 CLASS_EN = {"Death knight", "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior"}
 
 

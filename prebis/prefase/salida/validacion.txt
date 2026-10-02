@@ -1,2 +1,2 @@
-Comprobado: 143 objetos, 25 encantamientos, 4 gemas, 14 entradas_lua
+Comprobado: 4339 objetos, 694 encantamientos, 109 gemas, 453 entradas_lua
 Sin problemas: todos los ID existen, los huecos coinciden, las fuentes son de la prefase, sin materiales de banda, la clase puede usar cada objeto y nada pide nivel superior a 70.
