@@ -120,16 +120,107 @@ SPECS = [
     ("Brujo", "Destrucción", "warlock", ["2h", "caster"]),
 ]
 
-# ---------- Qué se puede conseguir antes de las bandas ----------
+# ---------- Qué se puede conseguir sin bandas ----------
+# Escenario del servidor: base de datos WotLK con tope en 70, bandas cerradas y todo lo demás abierto (mazmorras
+# normales y heroicas, incluido el Bancal del Magister, misiones, reputaciones y profesiones en todas las zonas de
+# TBC y la Isla de Quel'Danas). Fuera: botín de bandas y jefes de mundo, reputaciones que se suben en bandas, JcJ,
+# insignias de los vendedores de fases 4 y 5, eventos de temporada y recetas que caen en bandas.
 RAID_ZONES = {3457, 3923, 3836, 3607, 3845, 3606, 3959, 3805, 4075}   # Kara, Gruul, Mag, SSC, TK, Hyjal, BT, ZA, SWP
-LATER_ZONES = {4131, 4080}                                             # Bancal del Magister, Isla de Quel'Danas
-WORLD_BOSSES = {17711, 18728}                                          # Kazzard y Kazzak
-LATER_FACTIONS = ("Ogri'la", "Guardia del cielo", "Ofensiva Sol Devastado", "Ala Abisal", "Juramorte",
-                  "El Ojo Violeta")  # El Ojo Violeta se sube en Karazhan
-EVENT_SOURCES = ("Headless Horseman", "Coren Direbrew", "Ahune", "Cofre (objeto del mundo)",
-                 "Shartuul", "Terokk")  # eventos de temporada y jefes invocados de la 2.1 (fase 2)
-SKIP_NAMES = ("Merciless Gladiator's", "Vengeful Gladiator's", "Brutal Gladiator's", "Veteran's", "Vindicator's",
-              "Guardian's")
+MGT, QUELDANAS = 4131, 4080
+WORLD_BOSSES = {17711, 18728}                                          # Doomwalker y Kazzak
+RAID_QUEST_ZONES = ("Karazhan", "Gruul's Lair", "Magtheridon's Lair", "Serpentshrine Cavern", "Tempest Keep",
+                    "Hyjal", "Black Temple", "Zul'Aman", "Sunwell Plateau", "The Eye")
+RAID_FACTIONS = ("El Ojo Violeta", "Juramorte", "La Escama de las Arenas")
+FACTION_PHASE = {"Ogri'la": 2, "Guardia del cielo": 2, "Ala Abisal": 2, "Ofensiva Sol Devastado": 5}
+EVENT_SOURCES = ("Headless Horseman", "Coren Direbrew", "Ahune", "Cofre (objeto del mundo)")
+PVP_NAMES = ("Gladiator's", "Merciless Gladiator's", "Vengeful Gladiator's", "Brutal Gladiator's", "Veteran's",
+             "Vindicator's", "Guardian's", "General's", "Marshal's", "Warlord's", "High Warlord's", "Grand Marshal's",
+             "Lieutenant Commander's", "Champion's", "Sergeant's", "Legionnaire's", "Knight-Lieutenant's",
+             "Blood Guard's", "Stone Guard's")
+
+# Receta -> origen, para descartar lo que se fabrica con planos que caen en bandas.
+RECIPE_FOR_SPELL = collections.defaultdict(list)
+_rtxt = (ROOT / "alc/AtlasLootClassic/Data/Recipe.lua").read_text()
+for m in __import__("re").finditer(r"\[(\d+)\] = \{\d+,\d+,(\d+)\}", _rtxt):
+    RECIPE_FOR_SPELL[int(m.group(2))].append(int(m.group(1)))
+QDB, ATLAS = TBC["QDB"], TBC["ATLAS"]
+
+
+def from_raid(item):
+    """True si el objeto (o su receta) solo sale de bandas o de jefes de mundo."""
+    for inst_ids, _, data, _ in ATLAS:
+        v = data.get(item)
+        for src in TBC["norm"](v) if v is not None else []:
+            if src.get(1) and inst_ids[src[1] - 1] in TBC["RAIDS"]:
+                return True
+    q = QDB["items"].get(item)
+    drops = (q[1] if q and len(q) > 1 and q[1] else []) or []
+    if drops and len(drops) <= 8:
+        zones = [(QDB["npcs"].get(n) or [None] * 9)[8] for n in drops]
+        if zones and all(z in RAID_ZONES for z in zones):
+            return True
+    return False
+
+
+def recipe_from_raid(it):
+    for s in it.get("sources") or []:
+        if "crafted" in s:
+            # Si alguna versión del plano cae en bandas se descarta (las otras versiones no tienen origen conocido).
+            if any(from_raid(rec) for rec in RECIPE_FOR_SPELL.get(s["crafted"].get("spellId"), [])):
+                return True
+    return False
+
+
+def recipe_known_outside_raids(rec):
+    """True si el plano tiene un origen conocido fuera de bandas (mazmorra, vendedor, reputación, misión)."""
+    if rec in fac_src:
+        return not any(f in fac_src[rec] for f in RAID_FACTIONS)
+    if rec in col_src:
+        return True
+    for inst_ids, _, data, _ in ATLAS:
+        v = data.get(rec)
+        for src in TBC["norm"](v) if v is not None else []:
+            if src.get(1) and inst_ids[src[1] - 1] not in TBC["RAIDS"]:
+                return True
+    q = QDB["items"].get(rec)
+    if q:
+        get = lambda i: q[i - 1] if len(q) >= i else None
+        if get(6) or get(14):
+            return True
+        drops = get(2) or []
+        zones = [(QDB["npcs"].get(n) or [None] * 9)[8] for n in drops]
+        if any(z not in RAID_ZONES for z in zones):
+            return True
+    return False
+
+
+def craft_ok(it):
+    """Objetos fabricados de fase 2 o posterior: solo si algún plano se consigue fuera de bandas."""
+    if phase_tbc.get(it["id"], 1) <= 1:
+        return True
+    for s in it.get("sources") or []:
+        if "crafted" in s:
+            return any(recipe_known_outside_raids(r) for r in RECIPE_FOR_SPELL.get(s["crafted"].get("spellId"), []))
+    return True
+
+
+def content(it):
+    """Etiqueta de contenido: Fase 1, Fase N, Bancal del Magister o Isla de Quel'Danas."""
+    iid = it["id"]
+    t, d, _ = source(iid)
+    zones = {next(iter(s.values())).get("zoneId") for s in it.get("sources") or []}
+    if MGT in zones or "Bancal del Magister" in d:
+        return "Bancal del Magister (fase 5)"
+    if QUELDANAS in zones or "Ofensiva Sol Devastado" in d or "Quel'Danas" in d:
+        return "Isla de Quel'Danas (fase 5)"
+    if "Shartuul" in d or "Terokk" in d:
+        return "Fase 2"
+    ph = phase_tbc.get(iid)
+    if ph is None:
+        ph = next((p for f, p in FACTION_PHASE.items() if f in d), 1 if iid < 32000 else None)
+    if ph is None:
+        return "Fase 2 o posterior"
+    return f"Fase {max(ph, 1)}"
 
 
 def obtainable(it):
@@ -138,37 +229,26 @@ def obtainable(it):
         return False
     if it.get("expansion") is None and iid < 23000:
         return False
-    if iid in phase_tbc:
-        if phase_tbc[iid] > 1:
-            return False
-    elif iid >= 32000:
-        return False  # objetos de 2.1 en adelante sin dato de fase: se descartan por prudencia
-    if any(it["name"].startswith(p) for p in SKIP_NAMES):
-        return False
-    if iid in fac_src and any(f in fac_src[iid] for f in LATER_FACTIONS):
-        return False
-    if iid in col_src and ("fase" in col_src[iid] or "Motas" in col_src[iid]):
+    if any(it["name"].startswith(p) for p in PVP_NAMES):
         return False
     t, d, aviso = source(iid)
-    if aviso or t in ("Banda", "Banda clásica", "Mazmorra clásica", "Evento"):
+    if t in ("Banda", "Banda clásica", "Mazmorra clásica", "Evento", "JcJ", "Sin confirmar"):
         return False
-    if any(e in d for e in EVENT_SOURCES) or "Horseman's" in it["name"]:
-        return False  # botín de eventos de temporada
+    if "Disponible solo en fases posteriores" in aviso or "Motas" in d:
+        return False  # insignias de fases 4 y 5, motas de sol
+    if any(f in d for f in RAID_FACTIONS) or any(e in d for e in EVENT_SOURCES) or "Horseman's" in it["name"]:
+        return False
+    if t == "Misión" and any(f"({z}" in d for z in RAID_QUEST_ZONES):
+        return False  # recompensas de misiones de banda
+    if from_raid(iid) or recipe_from_raid(it) or (t == "Profesión" and not craft_ok(it)):
+        return False
     srcs = it.get("sources") or []
-    if not srcs:
-        return t != "Sin confirmar"
-    ok = False
     for s in srcs:
         k, v = next(iter(s.items()))
-        if k == "drop":
-            if v.get("zoneId") in RAID_ZONES | LATER_ZONES or v.get("npcId") in WORLD_BOSSES:
-                continue
-            ok = True
-        elif k in ("crafted", "quest", "soldBy"):
-            if k == "soldBy" and v.get("zoneId") in LATER_ZONES:
-                continue
-            ok = True
-    return ok
+        if k == "drop" and (v.get("zoneId") in RAID_ZONES or v.get("npcId") in WORLD_BOSSES):
+            continue
+        return True
+    return not srcs
 
 
 POOL = [it for it in ITEMS.values() if obtainable(it)]
@@ -278,6 +358,34 @@ def fmt(t, d):
     return f"{t}: {d}"
 
 
+# Listas Wowhead/wowtbc de todas las fases (PreRaid a SWP), para abalorios y reliquias.
+import re as _re
+PHASES = ["PreRaid", "T4", "T5", "T6", "ZA", "SWP"]
+ALL_LISTS = collections.defaultdict(list)  # (clase, spec, fase) -> [(slot, [ids])]
+for m in _re.finditer(r'^Bistooltip_wowtbc_bislists\["(\w+)"\]\["(\w+)"\]\["(\w+)"\]\[(\d+)\] = \{ \["slot_name"\] = "(\w+)", \["enhs"\] = \{.*?\}, (.*?) \};$',
+                      (ROOT / "BiS-Tooltip_335a_backport_TBC/Bistooltip_wowtbc_bislists.lua").read_text(), _re.M):
+    c, sp, ph, idx, slot, rest = m.groups()
+    ids = [int(v) for _, v in sorted((int(a), b) for a, b in _re.findall(r'\[(\d+)\] = (-?\d+)', rest))]
+    ALL_LISTS[(c, sp, ph)].append((int(idx), slot, ids))
+ES_TO_KEY = {(TBC["CLASS_ES"][c], TBC["SPEC_ES"][(c, sp)]): (c, sp) for (c, sp) in TBC["SPEC_ES"]}
+
+
+def list_order(cls, spec, slot_words):
+    """Objetos obtenibles de las listas de todas las fases, de la fase más avanzada a la primera."""
+    c, sp = ES_TO_KEY[(cls, spec)]
+    out, seen = [], set()
+    for ph in reversed(PHASES):
+        for _, slot, ids in sorted(ALL_LISTS.get((c, sp, ph), [])):
+            if not any(wd in slot for wd in slot_words):
+                continue
+            for iid in ids:
+                it = ITEMS.get(iid)
+                if it and iid not in seen and obtainable(it):
+                    seen.add(iid)
+                    out.append((0.0, it))
+    return out
+
+
 rows, full = [], []
 tbc_first = {}
 for r in tbc_rows:
@@ -305,7 +413,7 @@ def emit(cls, spec, slot, picks, alts, tbc_slot, note=""):
         rows.append({
             "clase": cls, "especializacion": spec, "ranura": slot + (f" {i + 1}" if len(picks) > 1 else ""),
             "objeto": it["name"], "item_id": it["id"], "puntos": round(sc, 1), "tipo_fuente": t, "fuente": d,
-            "faccion": faction(it, d),
+            "faccion": faction(it, d), "contenido": content(it),
             "alternativas": " · ".join(f"{a['name']} ({fmt(*fmt_src(a['id']))})" for _, a in alts) if i == 0 else "",
             "en_lista_tbc": "sí" if it["name"] in tbc_list else ("—" if not tbc_list else "no"),
             "nota": note if i == 0 else "",
@@ -324,15 +432,10 @@ for cls, spec, wkey, configs in SPECS:
         else:
             top = ranked(cands, w)
             emit(cls, spec, slot, top[:1], top[1:3], slot)
-    # Abalorios: orden de la lista Wowhead/wowtbc, solo los obtenibles.
-    trink = []
-    for r in tbc_rows:
-        if (r["clase"], r["especializacion"]) == (cls, spec) and r["ranura"].startswith("Abalorios") \
-                and r["obtenible_prerraid"] == "sí" and r["item_id"] in ITEMS and obtainable(ITEMS[r["item_id"]]) \
-                and r["objeto"] not in [t["name"] for _, t in trink]:
-            trink.append((0.0, ITEMS[r["item_id"]]))
+    # Abalorios: listas Wowhead/wowtbc de todas las fases, solo los obtenibles.
+    trink = list_order(cls, spec, ("Trinket",))
     emit(cls, spec, "Abalorios", trink[:2], trink[2:4], "Abalorios",
-         "Orden de la lista Wowhead/wowtbc (efectos de uso y probabilidad)")
+         "Orden de las listas Wowhead/wowtbc (efectos de uso y probabilidad)")
     # Armas: se compara cada configuración y se elige la de más puntos.
     best = None
     for cfg in configs:
@@ -366,12 +469,8 @@ for cls, spec, wkey, configs in SPECS:
     top = ranked(cands, w, "ranged")
     if label in ("Ídolo", "Tratado", "Tótem"):
         # Las reliquias valen por su efecto sobre un hechizo concreto: se sigue la lista Wowhead/wowtbc.
-        rel = []
-        for r in tbc_rows:
-            if (r["clase"], r["especializacion"]) == (cls, spec) and r["ranura"] == label \
-                    and r["obtenible_prerraid"] == "sí" and r["item_id"] in ITEMS and obtainable(ITEMS[r["item_id"]]):
-                rel.append((0.0, ITEMS[r["item_id"]]))
-        emit(cls, spec, label, rel[:1], rel[1:3], label, "Orden de la lista Wowhead/wowtbc (efecto sobre un hechizo)")
+        rel = list_order(cls, spec, ("Idol", "Libram", "Totem"))
+        emit(cls, spec, label, rel[:1], rel[1:3], label, "Orden de las listas Wowhead/wowtbc (efecto sobre un hechizo)")
     else:
         emit(cls, spec, label, top[:1], top[1:3], label)
 
@@ -381,19 +480,22 @@ with open(OUT / "prebis_wotlk_nivel70.csv", "w", newline="", encoding="utf-8-sig
     wr = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
     wr.writeheader(); wr.writerows(rows)
 
-md = ["# Pre-BiS de nivel 70 con la base de datos WotLK (3.3.5)", "",
-      "Equipo para un personaje recién llegado a 70, antes de Karazhan, Gruul y Magtheridon, elegido con las "
-      "estadísticas que tienen los objetos de TBC en la base de datos de WotLK 3.3.5 (poder con hechizos en vez de "
-      "daño y sanación por separado, índice de golpe/crítico/celeridad unificado, penetración de armadura como "
-      "índice, sin poder de ataque feral en las armas, etc.).", "",
-      "**Cómo se eligió:** cada objeto se puntúa con los pesos de estadísticas de wowsims WotLK para la "
-      "especialización, contando gemas raras de TBC y bonificación de ranura. Solo entran objetos de la fase 1 que "
-      "no salen de bandas: mazmorras normales y heroicas, reputaciones, profesiones, misiones, Insignias de Justicia "
-      "y JcJ (honor y arena temporada 1). Quedan fuera las reputaciones que se suben en bandas (El Ojo Violeta) o en "
-      "fases posteriores. Los abalorios y las reliquias siguen la lista de Wowhead/wowtbc porque su valor está en "
-      "efectos de uso o sobre un hechizo que la suma de estadísticas no mide. Los bonus de conjunto no se cuentan.", "",
-      "**Columna «¿En lista TBC?»:** «no» quiere decir que con las estadísticas WotLK sale un objeto distinto al de "
-      "las listas originales de TBC.", ""]
+md = ["# Pre-BiS de nivel 70 con la base de datos WotLK (3.3.5), sin bandas", "",
+      "Lo mejor que se puede conseguir a nivel 70 en un servidor con la base de datos de WotLK 3.3.5 y tope en 70, "
+      "con las bandas cerradas: mazmorras normales y heroicas (incluido el Bancal del Magister), misiones, "
+      "reputaciones y profesiones en todas las zonas de TBC y la Isla de Quel'Danas.", "",
+      "**Cómo se eligió:** cada objeto se puntúa con sus estadísticas de WotLK (poder con hechizos unificado, índices "
+      "de golpe, crítico y celeridad comunes, penetración de armadura como índice, sin poder de ataque feral en las "
+      "armas) y los pesos de wowsims WotLK para la especialización, contando gemas raras de TBC y la bonificación de "
+      "ranura. Los abalorios y las reliquias siguen el orden de las listas de Wowhead/wowtbc, porque su valor está en "
+      "efectos que la suma de estadísticas no mide. Los bonus de conjunto no se cuentan.", "",
+      "**Fuera de la lista:** botín de bandas y jefes de mundo, recompensas de misiones de banda, objetos fabricados "
+      "con planos que caen en bandas, reputaciones que se suben en bandas (El Ojo Violeta, Juramorte, La Escama de "
+      "las Arenas), JcJ, Insignias de Justicia de los vendedores de fases 4 y 5, motas de sol y eventos de temporada.",
+      "",
+      "**Marcas:** en la columna Fuente se marca en negrita lo que no es de la fase 1 (Bancal del Magister, Isla de "
+      "Quel'Danas, Ogri'la, Skettis, etc.) para que se vea qué depende de que el servidor tenga ese contenido abierto. "
+      "«¿En lista TBC?» dice si el objeto coincide con la lista pre-raid original de Wowhead/wowtbc.", ""]
 cur = None
 for i, r in enumerate(rows):
     key = (r["clase"], r["especializacion"])
@@ -405,6 +507,7 @@ for i, r in enumerate(rows):
         cur = key
     nota = f" ({r['nota']})" if r["nota"] else ""
     nota += f" · solo {r['faccion']}" if r["faccion"] else ""
+    nota += f" · **{r['contenido']}**" if r["contenido"] != "Fase 1" else ""
     md.append(f"| {r['ranura']} | [{r['objeto']}]({r['wowhead']}) | {fmt(r['tipo_fuente'], r['fuente'])}{nota} | "
               f"{r['en_lista_tbc']} | {r['alternativas']} |")
     if i + 1 == len(rows) or (rows[i + 1]["clase"], rows[i + 1]["especializacion"]) != key:
