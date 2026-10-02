@@ -24,3 +24,11 @@ fuentes/
 
 PREBIS_FUENTES=fuentes python3 compilar_prebis.py ..
 ```
+
+## Versión con la base de datos WotLK
+
+`compilar_prebis_wotlk.py` genera `prebis_wotlk_nivel70.md/.csv`: en vez de copiar las listas de TBC, puntúa todos
+los objetos de TBC obtenibles en fase 1 sin bandas con sus estadísticas de WotLK 3.3.5
+(`assets/database/*.json` de [wowsims/wotlk](https://github.com/wowsims/wotlk), sacadas de Wowhead WotLK) y los pesos
+de estadísticas de cada especialización de wowsims WotLK, con el golpe valorado antes del tope y el maná por 5 para
+sanadores. Necesita además `wswotlk/` (wowsims/wotlk) en la carpeta de fuentes y reutiliza `compilar_prebis.py`.
