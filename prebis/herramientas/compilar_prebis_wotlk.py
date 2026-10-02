@@ -254,7 +254,36 @@ def obtainable(it):
 POOL = [it for it in ITEMS.values() if obtainable(it)]
 
 # ---------- Gemas (raras de TBC con estadísticas WotLK) ----------
-GEMS = [g for g in DB["gems"] if g.get("quality") == 3 and g["id"] < 40000 and 2 <= g["color"] <= 7]
+# La base de wowsims/wotlk no trae las gemas raras de TBC (Rubí vivo, Topacio noble...), así que se definen aquí
+# con sus valores en 3.3.5. Rojo 2, azul 3, amarillo 4, verde 5, naranja 6, morado 7.
+def _gem(gid, name, color, **st):
+    v = [0] * 40
+    for k, x in st.items():
+        for key in {"HIT": ("SHIT", "MHIT"), "CRIT": ("SCRIT", "MCRIT"), "HASTE": ("SHASTE", "MHASTE"),
+                    "AP": ("AP", "RAP")}.get(k, (k,)):
+            v[S[key]] = x
+    return {"id": gid, "name": name, "color": color, "stats": v}
+
+
+GEMS = [
+    _gem(24027, "Bold Living Ruby", 2, STR=8), _gem(24028, "Delicate Living Ruby", 2, AGI=8),
+    _gem(24030, "Runed Living Ruby", 2, SP=9), _gem(24031, "Bright Living Ruby", 2, AP=16),
+    _gem(24032, "Subtle Living Ruby", 2, DODGE=8), _gem(24036, "Flashing Living Ruby", 2, PARRY=8),
+    _gem(24047, "Brilliant Dawnstone", 4, INT=8), _gem(24048, "Smooth Dawnstone", 4, CRIT=8),
+    _gem(24051, "Rigid Dawnstone", 4, HIT=8), _gem(35315, "Quick Dawnstone", 4, HASTE=8),
+    _gem(24052, "Thick Dawnstone", 4, DEF=8),
+    _gem(24033, "Solid Star of Elune", 3, STA=12), _gem(24035, "Sparkling Star of Elune", 3, SPI=8),
+    _gem(24037, "Lustrous Star of Elune", 3, MP5=4),
+    _gem(24058, "Inscribed Noble Topaz", 6, STR=4, CRIT=4), _gem(24061, "Glinting Noble Topaz", 6, AGI=4, HIT=4),
+    _gem(24059, "Potent Noble Topaz", 6, SP=5, CRIT=4), _gem(24060, "Luminous Noble Topaz", 6, SP=5, INT=4),
+    _gem(31867, "Veiled Noble Topaz", 6, SP=5, HIT=4), _gem(31868, "Wicked Noble Topaz", 6, AP=8, CRIT=4),
+    _gem(35316, "Reckless Noble Topaz", 6, SP=5, HASTE=4),
+    _gem(24054, "Sovereign Nightseye", 7, STR=4, STA=6), _gem(24055, "Shifting Nightseye", 7, AGI=4, STA=6),
+    _gem(24056, "Glowing Nightseye", 7, SP=5, STA=6), _gem(24057, "Royal Nightseye", 7, SP=5, MP5=2),
+    _gem(31863, "Balanced Nightseye", 7, AP=8, STA=6), _gem(35707, "Regal Nightseye", 7, DODGE=4, STA=6),
+    _gem(24065, "Dazzling Talasite", 5, INT=4, MP5=2), _gem(24062, "Enduring Talasite", 5, DEF=4, STA=6),
+    _gem(24067, "Jagged Talasite", 5, CRIT=4, STA=6), _gem(35318, "Forceful Talasite", 5, HASTE=4, STA=6),
+]
 METAS = [g for g in DB["gems"] if g["color"] == 1 and g["id"] < 40000]
 FITS = {2: {2, 6, 7}, 3: {3, 5, 7}, 4: {4, 5, 6}}  # color de ranura -> colores de gema que la cumplen
 

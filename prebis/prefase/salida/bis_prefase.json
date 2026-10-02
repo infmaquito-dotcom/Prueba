@@ -1,0 +1,6461 @@
+{
+ "descripcion": "Listas BiS de la PreFase de TBC (servidor 3.3.5a, nivel 70). Generado por prefase.py.",
+ "fuentes_de_datos": {
+  "azerothcore": "azerothcore-wotlk, data/sql/base/db_world: item_template, item_template_locale, creature_template(+locale), creature, creature_loot_template, reference_loot_template, gameobject(+template, loot), item_loot_template, npc_vendor, quest_template(+locale), creature_queststarter, gameobject_queststarter, trainer_spell",
+  "wowsims_wotlk": "pesos de nivel 80 (ui/<spec>/sim.ts), bonificaciones de ranura y estadísticas de encantamientos (assets/database/db.json), tooltips WotLK (db_inputs)",
+  "wowsims_tbc": "fase original de cada objeto (sim/core/items/all_items.go), solo orientación",
+  "atlasloot_classic": "reactivos y habilidad de recetas (Data/Profession.lua) y precio en insignias (Data/VendorPrice.lua); licencia GPL-2",
+  "questie": "no se usa"
+ },
+ "especializaciones": {
+  "Paladin/Retribution": {
+   "clase": "Paladin",
+   "especializacion": "Retribution",
+   "clase_es": "Paladín",
+   "spec_es": "Reprensión",
+   "pesos": {
+    "nivel_80_wowsims": {
+     "STR": 2.53,
+     "AGI": 1.13,
+     "INT": 0.15,
+     "SP": 0.32,
+     "AP": 1.0,
+     "HIT": 2.37,
+     "CRIT": 1.17,
+     "HASTE": 1.56,
+     "ARP": 0.76,
+     "EXP": 1.8,
+     "MP5": 0.05,
+     "MH": 7.33
+    },
+    "nivel_70": {
+     "STR": 2.53,
+     "AGI": 1.13,
+     "INT": 0.15,
+     "SP": 0.32,
+     "AP": 1.0,
+     "HIT": 2.275,
+     "CRIT": 1.123,
+     "HASTE": 1.497,
+     "ARP": 0.729,
+     "EXP": 1.728,
+     "MP5": 0.05,
+     "MH": 7.33
+    },
+    "nivel_70_para_ordenar": {
+     "STR": 2.53,
+     "AGI": 1.13,
+     "INT": 0.15,
+     "SP": 0.32,
+     "AP": 1.0,
+     "HIT": 1.592,
+     "CRIT": 1.123,
+     "HASTE": 1.497,
+     "ARP": 0.729,
+     "EXP": 1.728,
+     "MP5": 0.05,
+     "MH": 7.33
+    },
+    "factor_indices": 0.96,
+    "calculo": [
+     "Índice de golpe: 2.37 x 0.960 = 2.27",
+     "Índice de crítico: 1.17 x 0.960 = 1.12",
+     "Índice de celeridad: 1.56 x 0.960 = 1.50",
+     "Índice de penetración de armadura: 0.76 x 0.960 = 0.73",
+     "Índice de pericia: 1.80 x 0.960 = 1.73"
+    ],
+    "referencia": {
+     "stat": "poder de ataque con bufos",
+     "70": 3000,
+     "80": 6500
+    },
+    "busqueda_topes": [
+     {
+      "peso_golpe": 2.275,
+      "peso_pericia": 1.728,
+      "golpe": 248,
+      "pericia": 0,
+      "valor_equipo": 3142.6
+     },
+     {
+      "peso_golpe": 2.275,
+      "peso_pericia": 0.864,
+      "golpe": 248,
+      "pericia": 0,
+      "valor_equipo": 3142.6
+     },
+     {
+      "peso_golpe": 2.047,
+      "peso_pericia": 1.728,
+      "golpe": 217,
+      "pericia": 0,
+      "valor_equipo": 3209.3
+     },
+     {
+      "peso_golpe": 2.047,
+      "peso_pericia": 0.864,
+      "golpe": 217,
+      "pericia": 0,
+      "valor_equipo": 3209.3
+     },
+     {
+      "peso_golpe": 1.82,
+      "peso_pericia": 1.728,
+      "golpe": 173,
+      "pericia": 0,
+      "valor_equipo": 3279.1
+     },
+     {
+      "peso_golpe": 1.82,
+      "peso_pericia": 0.864,
+      "golpe": 173,
+      "pericia": 0,
+      "valor_equipo": 3279.1
+     },
+     {
+      "peso_golpe": 1.592,
+      "peso_pericia": 1.728,
+      "golpe": 131,
+      "pericia": 0,
+      "valor_equipo": 3340.8
+     },
+     {
+      "peso_golpe": 1.592,
+      "peso_pericia": 0.864,
+      "golpe": 131,
+      "pericia": 0,
+      "valor_equipo": 3340.8
+     },
+     {
+      "peso_golpe": 1.365,
+      "peso_pericia": 1.728,
+      "golpe": 97,
+      "pericia": 0,
+      "valor_equipo": 3323.8
+     },
+     {
+      "peso_golpe": 1.365,
+      "peso_pericia": 0.864,
+      "golpe": 97,
+      "pericia": 0,
+      "valor_equipo": 3323.8
+     },
+     {
+      "peso_golpe": 1.137,
+      "peso_pericia": 1.728,
+      "golpe": 72,
+      "pericia": 0,
+      "valor_equipo": 3297.5
+     },
+     {
+      "peso_golpe": 1.137,
+      "peso_pericia": 0.864,
+      "golpe": 72,
+      "pericia": 0,
+      "valor_equipo": 3297.5
+     },
+     {
+      "peso_golpe": 0.91,
+      "peso_pericia": 1.728,
+      "golpe": 72,
+      "pericia": 0,
+      "valor_equipo": 3297.5
+     },
+     {
+      "peso_golpe": 0.91,
+      "peso_pericia": 0.864,
+      "golpe": 72,
+      "pericia": 0,
+      "valor_equipo": 3297.5
+     },
+     {
+      "peso_golpe": 0.682,
+      "peso_pericia": 1.728,
+      "golpe": 56,
+      "pericia": 0,
+      "valor_equipo": 3272.5
+     },
+     {
+      "peso_golpe": 0.682,
+      "peso_pericia": 0.864,
+      "golpe": 56,
+      "pericia": 0,
+      "valor_equipo": 3272.5
+     },
+     {
+      "peso_golpe": 0.387,
+      "peso_pericia": 1.728,
+      "golpe": 46,
+      "pericia": 0,
+      "valor_equipo": 3256.5
+     },
+     {
+      "peso_golpe": 0.387,
+      "peso_pericia": 0.864,
+      "golpe": 46,
+      "pericia": 0,
+      "valor_equipo": 3256.5
+     }
+    ]
+   },
+   "topes": {
+    "golpe cuerpo a cuerpo": {
+     "porcentaje": 8.0,
+     "índice": 126.2,
+     "cálculo": "(5 % + 3 x 1 % = 8 %) - 0.0 % de talentos = 8.0 % x 15.7692 índice/% = 126.2"
+    },
+    "pericia (esquiva)": {
+     "puntos": 26.0,
+     "índice": 102.5,
+     "cálculo": "6,5 % / 0,25 % = 26 puntos - 0 de talentos/glifos = 26.0 x 3.9423 = 102.5"
+    },
+    "pericia (parada, tanques)": {
+     "puntos": 56.0,
+     "índice": 220.8,
+     "cálculo": "14 % / 0,25 % = 56 puntos - 0 = 56.0 x 3.9423"
+    },
+    "golpe con hechizos": {
+     "porcentaje": 17.0,
+     "índice": 214.5,
+     "cálculo": "17 % - 0.0 % de talentos = 17.0 % x 12.6154 = 214.5"
+    },
+    "defensa (inmunidad a críticos)": {
+     "puntos": 140,
+     "índice": 331.2,
+     "cálculo": "5,6 % / 0,04 % = 140 de defensa sobre 350 (total 490) x 2.3654 = 331.2"
+    }
+   },
+   "indices_nivel_70": {
+    "golpe cuerpo a cuerpo": 15.7692,
+    "golpe con hechizos": 12.6154,
+    "crítico": 22.0769,
+    "celeridad": 15.7692,
+    "pericia (por punto)": 3.9423,
+    "defensa (por punto)": 2.3654,
+    "esquivar": 21.7615,
+    "parada": 21.7615,
+    "bloqueo": 7.8846,
+    "penetración de armadura": 6.7287,
+    "celeridad cuerpo a cuerpo (híbridos)": 12.1302
+   },
+   "talentos": {
+    "reparto": "5/5/51",
+    "texto": [
+     "Sagrado 5: Sellos de los puros 5/5 (+15 % al daño de sellos y sentencias).",
+     "Protección 5: Fuerza divina 5/5 (+15 % de Fuerza).",
+     "Reprensión 51: Bendición 5/5, Sentencias mejoradas 2/2, Corazón del cruzado 3/3, Vindicación 1/2, Convicción 5/5, Sello de orden 1/1, Santidad de batalla 3/3, Cruzada 3/3, Especialización en armas de dos manos 3/3, Reprensión santificada 1/1, Venganza 3/3, El arte de la guerra 2/2, Sentencias de los sabios 3/3, Fanatismo 3/3, Cólera santificada 2/2, Reprensión presta 3/3, Golpe de cruzado 1/1, Vaina de luz 3/3, Venganza justa 3/3, Tormenta divina 1/1."
+    ],
+    "razon": "Con 61 puntos se llega a Tormenta divina (fila 11, 50 puntos en Reprensión) y quedan 11 puntos. Fuerza divina (+15 % Fuerza) y Sellos de los puros (+15 % sellos y sentencias) son los dos talentos de daño más baratos fuera del árbol. Dentro de Reprensión se dejan fuera Desviación, Ojo por ojo, Arrepentimiento, Persecución de la justicia, Bendición de poderío mejorada, Propósito divino y un punto de Vindicación, que no suben el daño en solitario contra un jefe.",
+    "golpe_pericia": "Ningún talento de este reparto da golpe ni pericia; el Glifo de Sello de venganza da 10 de pericia (si se puede conseguir, ver glifos)."
+   },
+   "huecos": {
+    "Head": [
+     {
+      "id": 28182,
+      "nombre_es": "Yelmo de la garra",
+      "nombre_en": "Helm of the Claw",
+      "ep": 205.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: La Cámara de Vapor",
+        "jefe": "La guarida del Señor de la Guerra",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 0,
+      "InventoryType": 1,
+      "estadisticas": {
+       "AGI": 25,
+       "STA": 21,
+       "HIT": 14,
+       "ARMOR": 237,
+       "AP": 66
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "RES": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28224,
+      "nombre_es": "Yelmo de transitayermos",
+      "nombre_en": "Wastewalker Helm",
+      "ep": 198.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Antiguas Laderas de Trabalomas (Heroico)",
+        "jefe": "Cazador de eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STA": 30,
+       "CRIT": 22,
+       "HIT": 18,
+       "ARMOR": 237,
+       "AP": 56
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "AP": 8
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27408,
+      "nombre_es": "Yelmo de portador de esperanza",
+      "nombre_en": "Hope Bearer Helm",
+      "ep": 183.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Criptas Auchenai",
+        "jefe": "Shirrak el Vigía de los Muertos",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 100,
+      "nivel_requerido": 65,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STR": 30,
+       "STA": 19,
+       "AGI": 23,
+       "HIT": 13,
+       "ARMOR": 827
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "MP5": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28414,
+      "nombre_es": "Yelmo de asesinato",
+      "nombre_en": "Helm of Assassination",
+      "ep": 182.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Arcatraz",
+        "jefe": "Presagista Cieloriss",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Arcatraz (Heroico)",
+        "jefe": "Presagista Cieloriss",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STA": 25,
+       "CRIT": 25,
+       "ARMOR": 237,
+       "AP": 66
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "DODGE": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 31105,
+      "nombre_es": "Casco de la clarividencia de Señor Supremo",
+      "nombre_en": "Overlord's Helmet of Second Sight",
+      "ep": 181.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Valle Sombraluna",
+        "jefe": "Yo, Teron Sanguino",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 109,
+      "nivel_requerido": 0,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STA": 22,
+       "STR": 29,
+       "HIT": 13,
+       "CRIT": 24,
+       "ARMOR": 898
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STR": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28225,
+      "nombre_es": "Yelmo de guerra de placas malditas",
+      "nombre_en": "Doomplate Warhelm",
+      "ep": 181.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Antiguas Laderas de Trabalomas (Heroico)",
+        "jefe": "Cazador de eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STR": 34,
+       "STA": 39,
+       "ARMOR": 946
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Neck": [
+     {
+      "id": 31275,
+      "nombre_es": "Collar de trofeos",
+      "nombre_en": "Necklace of Trophies",
+      "ep": 94.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mundo",
+        "instancia": "Botín de mundo",
+        "jefe": "BoE / subasta",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "Antiguas Laderas de Trabalomas",
+        "jefe": "Velador de Lordaeron",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "Antiguas Laderas de Trabalomas (Heroico)",
+        "jefe": "Velador de Lordaeron",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 106,
+      "nivel_requerido": 67,
+      "InventoryType": 2,
+      "estadisticas": {
+       "STR": 22,
+       "AGI": 15,
+       "HIT": 14
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 29119,
+      "nombre_es": "Baratija de Haramad",
+      "nombre_en": "Haramad's Bargain",
+      "ep": 94.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "vendedor",
+        "instancia": "Vendedor",
+        "jefe": "Karaaz",
+        "nota": ""
+       },
+       {
+        "categoria": "vendedor",
+        "instancia": "Vendedor",
+        "jefe": "Paulsta'ats",
+        "nota": ""
+       }
+      ],
+      "reputacion": {
+       "faccion": "El Consorcio",
+       "faccion_en": "The Consortium",
+       "nivel": "Exaltado"
+      },
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "AGI": 25,
+       "STR": 26
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27551,
+      "nombre_es": "Collar de furia de batalla esquelético",
+      "nombre_en": "Skeletal Necklace of Battlerage",
+      "ep": 84.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Recinto de los Esclavos (Heroico)",
+        "jefe": "Rokmar el Crujidor",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "STR": 26,
+       "STA": 21,
+       "HIT": 12
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 31695,
+      "nombre_es": "Gargantilla de Natasha",
+      "nombre_en": "Natasha's Choker",
+      "ep": 82.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Montañas Filospada",
+        "jefe": "El Maestro de canes",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 103,
+      "nivel_requerido": 0,
+      "InventoryType": 2,
+      "estadisticas": {
+       "CRIT": 15,
+       "HIT": 10,
+       "AP": 50
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 31694,
+      "nombre_es": "Collera de manada de Natasha",
+      "nombre_en": "Natasha's Pack Collar",
+      "ep": 80.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Montañas Filospada",
+        "jefe": "El Maestro de canes",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 103,
+      "nivel_requerido": 0,
+      "InventoryType": 2,
+      "estadisticas": {
+       "STR": 25,
+       "AGI": 15,
+       "STA": 15
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27779,
+      "nombre_es": "Collar de cadena de huesos",
+      "nombre_en": "Bone Chain Necklace",
+      "ep": 78.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Sotiénaga (Heroico)",
+        "jefe": "La Acechadora Negra",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "AGI": 19,
+       "STA": 18,
+       "HIT": 13,
+       "AP": 36
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Shoulder": [
+     {
+      "id": 33173,
+      "nombre_es": "Sobrehombros de acerira",
+      "nombre_en": "Ragesteel Shoulders",
+      "ep": 154.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Plans: Ragesteel Shoulders (365) — Botín de mundo: BoE / subasta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "STR": 32,
+       "CRIT": 17,
+       "HIT": 9,
+       "STA": 12,
+       "ARMOR": 873
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 27797,
+      "nombre_es": "Hombreras de transitayermos",
+      "nombre_en": "Wastewalker Shoulderpads",
+      "ep": 128.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Criptas Auchenai (Heroico)",
+        "jefe": "Avatar de los Martirizados",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "AGI": 25,
+       "STA": 13,
+       "HIT": 16,
+       "ARMOR": 219,
+       "AP": 34
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 25968,
+      "nombre_es": "Cubrehombros de avizor shalassi",
+      "nombre_en": "Shalassi Sentry's Epaulets",
+      "ep": 123.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Bosque de Terokkar",
+        "jefe": "¡Rescata a Deirom!",
+        "nota": ""
+       },
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Bosque de Terokkar",
+        "jefe": "¡Rescata a Dugar!",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 91,
+      "nivel_requerido": 0,
+      "InventoryType": 3,
+      "estadisticas": {
+       "AGI": 15,
+       "HIT": 15,
+       "ARMOR": 392,
+       "AP": 42
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STA": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27434,
+      "nombre_es": "Manto de Perenolde",
+      "nombre_en": "Mantle of Perenolde",
+      "ep": 122.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Antiguas Laderas de Trabalomas",
+        "jefe": "Cazador de eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 103,
+      "nivel_requerido": 66,
+      "InventoryType": 3,
+      "estadisticas": {
+       "STA": 24,
+       "CRIT": 23,
+       "HIT": 23,
+       "ARMOR": 197,
+       "AP": 20
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "DODGE": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29147,
+      "nombre_es": "Bufas de pellejo de talbuk",
+      "nombre_en": "Talbuk Hide Spaulders",
+      "ep": 116.5,
+      "faccion": "Horda",
+      "fuentes": [
+       {
+        "categoria": "vendedor",
+        "instancia": "Vendedor",
+        "jefe": "Proveedora Nasela",
+        "nota": ""
+       }
+      ],
+      "reputacion": {
+       "faccion": "Los Mag'har",
+       "faccion_en": "The Mag'har",
+       "nivel": "Venerado"
+      },
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "AGI": 20,
+       "HIT": 15,
+       "ARMOR": 219,
+       "AP": 70
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29148,
+      "nombre_es": "Bufas de cuero ennegrecidas",
+      "nombre_en": "Blackened Leather Spaulders",
+      "ep": 116.5,
+      "faccion": "Alianza",
+      "fuentes": [
+       {
+        "categoria": "vendedor",
+        "instancia": "Vendedor",
+        "jefe": "Comerciante Narasu",
+        "nota": ""
+       }
+      ],
+      "reputacion": {
+       "faccion": "Kurenai",
+       "faccion_en": "Kurenai",
+       "nivel": "Venerado"
+      },
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "AGI": 20,
+       "HIT": 15,
+       "ARMOR": 219,
+       "AP": 70
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Back": [
+     {
+      "id": 33122,
+      "nombre_es": "Capa de oscuridad",
+      "nombre_en": "Cloak of Darkness",
+      "ep": 105.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Cloak of Darkness (360) — Vendedor: Aprendiz Darius",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 120,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 25,
+       "CRIT": 24,
+       "STR": 23,
+       "ARMOR": 101
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 24259,
+      "nombre_es": "Sobrevesta de venganza",
+      "nombre_en": "Vengeance Wrap",
+      "ep": 101.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Sastrería",
+        "jefe": "Pattern: Vengeance Wrap (365) — Botín de mundo: BoE / subasta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "CRIT": 23,
+       "ARMOR": 89,
+       "AP": 52
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 27878,
+      "nombre_es": "Embozo mortuorio Auchenai",
+      "nombre_en": "Auchenai Death Shroud",
+      "ep": 80.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Criptas Auchenai (Heroico)",
+        "jefe": "Avatar de los Martirizados",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "AGI": 15,
+       "STA": 15,
+       "HIT": 17,
+       "ARMOR": 78,
+       "AP": 36
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28249,
+      "nombre_es": "Capa de calibración de Capacitus",
+      "nombre_en": "Capacitus' Cloak of Calibration",
+      "ep": 76.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Mechanar",
+        "jefe": "Cache of the Legion",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STR": 22,
+       "AGI": 18,
+       "STA": 19,
+       "ARMOR": 78
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27892,
+      "nombre_es": "Capa del incitador",
+      "nombre_en": "Cloak of the Inciter",
+      "ep": 75.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Laberinto de las Sombras",
+        "jefe": "Negrozón el Incitador",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "Laberinto de las Sombras (Heroico)",
+        "jefe": "Negrozón el Incitador",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 112,
+      "nivel_requerido": 68,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 15,
+       "CRIT": 18,
+       "HIT": 16,
+       "ARMOR": 76,
+       "AP": 30
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28031,
+      "nombre_es": "Capa tejida de nómada",
+      "nombre_en": "Nomad's Woven Cloak",
+      "ep": 71.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Nagrand",
+        "jefe": "¡Tráeme el huevo!",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 97,
+      "nivel_requerido": 0,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STR": 14,
+       "AGI": 14,
+       "STA": 21,
+       "HIT": 13,
+       "ARMOR": 66
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Chest": [
+     {
+      "id": 28484,
+      "nombre_es": "Baluarte de reyes",
+      "nombre_en": "Bulwark of Kings",
+      "ep": 227.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 0,
+      "nivel_objeto": 127,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "STR": 35,
+       "STA": 55,
+       "CRIT": 37,
+       "HIT": 23,
+       "ARMOR": 1595
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28483,
+      "nombre_es": "Coraza de reyes",
+      "nombre_en": "Breastplate of Kings",
+      "ep": 205.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (350)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 107,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "STR": 31,
+       "STA": 46,
+       "CRIT": 31,
+       "HIT": 20,
+       "ARMOR": 1353
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29515,
+      "nombre_es": "Coraza de escamas abisales de ébano",
+      "nombre_en": "Ebon Netherscale Breastplate",
+      "ep": 179.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 120,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "CRIT": 31,
+       "STA": 25,
+       "INT": 23,
+       "ARMOR": 846,
+       "AP": 80,
+       "MP5": 10
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29525,
+      "nombre_es": "Jubón de golpe primigenio",
+      "nombre_en": "Primalstrike Vest",
+      "ep": 170.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 120,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "AGI": 38,
+       "STA": 39,
+       "HIT": 12,
+       "ARMOR": 379,
+       "AP": 108
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 23564,
+      "nombre_es": "Camisa de anillas de El Vacío Abisal",
+      "nombre_en": "Twisting Nether Chain Shirt",
+      "ep": 169.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 127,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "CRIT": 33,
+       "INT": 22,
+       "STA": 48,
+       "ARMOR": 893,
+       "AP": 68,
+       "MP5": 11
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 23522,
+      "nombre_es": "Coraza de acerira",
+      "nombre_en": "Ragesteel Breastplate",
+      "ep": 159.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Plans: Ragesteel Breastplate (370) — Terrallende: Guerrero Lengua de ceniza",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "STR": 50,
+       "CRIT": 29,
+       "ARMOR": 1164
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     }
+    ],
+    "Wrist": [
+     {
+      "id": 23537,
+      "nombre_es": "Brazales de acero vil negros",
+      "nombre_en": "Black Felsteel Bracers",
+      "ep": 90.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Plans: Black Felsteel Bracers (365) — Botín de mundo: BoE / subasta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STR": 26,
+       "CRIT": 22,
+       "STA": 15,
+       "ARMOR": 581
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 29527,
+      "nombre_es": "Brazales de golpe primigenio",
+      "nombre_en": "Primalstrike Bracers",
+      "ep": 81.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "AGI": 15,
+       "STA": 21,
+       "ARMOR": 159,
+       "AP": 64
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 25697,
+      "nombre_es": "Brazales de acechador vil",
+      "nombre_en": "Felstalker Bracers",
+      "ep": 80.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Felstalker Bracers (360) — Vendedor: Intendente Urgronn",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 114,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "AGI": 18,
+       "INT": 11,
+       "ARMOR": 283,
+       "AP": 38
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 29517,
+      "nombre_es": "Brazales de escamas abisales de ébano",
+      "nombre_en": "Ebon Netherscale Bracers",
+      "ep": 78.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "CRIT": 17,
+       "STA": 25,
+       "INT": 8,
+       "ARMOR": 325,
+       "AP": 38,
+       "MP5": 6
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 21618,
+      "nombre_es": "Guardamuñecas de colmena Rapiñador",
+      "nombre_en": "Hive Defiler Wristguards",
+      "ep": 78.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "banda clásica",
+        "instancia": "Templo de Ahn'Qiraj",
+        "jefe": "Princesa Huhuran",
+        "nota": "Banda clásica"
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": true,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 78,
+      "nivel_requerido": 60,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STR": 23,
+       "AGI": 18,
+       "ARMOR": 439
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29463,
+      "nombre_es": "Braciles de ámbar del agresor",
+      "nombre_en": "Amber Bands of the Aggressor",
+      "ep": 76.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Cámara de Vapor (Heroico)",
+        "jefe": "Señor de la guerra Kalithresh",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STR": 22,
+       "AGI": 18,
+       "STA": 25,
+       "DEF": 15,
+       "ARMOR": 608
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Hands": [
+     {
+      "id": 27497,
+      "nombre_es": "Guanteletes de placas malditas",
+      "nombre_en": "Doomplate Gauntlets",
+      "ep": 139.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Horno de Sangre (Heroico)",
+        "jefe": "Keli'dan el Ultrajador",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STR": 31,
+       "STA": 25,
+       "ARMOR": 728
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29507,
+      "nombre_es": "Guantes destripaviento",
+      "nombre_en": "Windslayer Wraps",
+      "ep": 138.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Windslayer Wraps (365) — Botín de mundo: BoE / subasta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STR": 36,
+       "AGI": 18,
+       "STA": 25,
+       "HIT": 17,
+       "ARMOR": 208
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 29509,
+      "nombre_es": "Guantes de golpe de viento",
+      "nombre_en": "Windstrike Gloves",
+      "ep": 138.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Windstrike Gloves (365) — Botín de mundo: BoE / subasta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STR": 36,
+       "AGI": 18,
+       "STA": 25,
+       "HIT": 17,
+       "ARMOR": 465
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 25685,
+      "nombre_es": "Guantes de cuero vil",
+      "nombre_en": "Fel Leather Gloves",
+      "ep": 130.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Fel Leather Gloves (340) — Vendedor: Karaaz",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 106,
+      "nivel_requerido": 67,
+      "InventoryType": 10,
+      "estadisticas": {
+       "HIT": 17,
+       "CRIT": 24,
+       "ARMOR": 169,
+       "AP": 36
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "AP": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 21581,
+      "nombre_es": "Guanteletes de Aniquilación",
+      "nombre_en": "Gauntlets of Annihilation",
+      "ep": 120.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "banda clásica",
+        "instancia": "Templo de Ahn'Qiraj",
+        "jefe": "C'Thun",
+        "nota": "Banda clásica"
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": true,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 88,
+      "nivel_requerido": 60,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STR": 35,
+       "STA": 15,
+       "ARMOR": 702,
+       "CRIT": 14,
+       "HIT": 10
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 23520,
+      "nombre_es": "Guantes de acerira",
+      "nombre_en": "Ragesteel Gloves",
+      "ep": 118.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Plans: Ragesteel Gloves (365) — Terrallende: Guerrero Puño de Roca",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STR": 35,
+       "CRIT": 27,
+       "ARMOR": 728
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     }
+    ],
+    "Waist": [
+     {
+      "id": 27755,
+      "nombre_es": "Faja de galantería",
+      "nombre_en": "Girdle of Gallantry",
+      "ep": 126.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Sotiénaga (Heroico)",
+        "jefe": "Ghaz'an",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STR": 27,
+       "AGI": 14,
+       "STA": 22,
+       "INT": 13,
+       "ARMOR": 655
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "RES": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29247,
+      "nombre_es": "Faja del mortífero",
+      "nombre_en": "Girdle of the Deathdealer",
+      "ep": 119.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Ciénaga Negra (Heroico)",
+        "jefe": "Aeonus",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "AGI": 28,
+       "STA": 28,
+       "HIT": 20,
+       "ARMOR": 196,
+       "AP": 56
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27985,
+      "nombre_es": "Faja de La Forja Muerta",
+      "nombre_en": "Deathforge Girdle",
+      "ep": 118.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Salas Sethekk",
+        "jefe": "Rey Garra Ikiss",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "Salas Sethekk (Heroico)",
+        "jefe": "Rey Garra Ikiss",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 68,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STR": 22,
+       "STA": 25,
+       "CRIT": 20,
+       "ARMOR": 655
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 25789,
+      "nombre_es": "Cinturón con grabados rúnicos",
+      "nombre_en": "Rune-Engraved Belt",
+      "ep": 116.5,
+      "faccion": "Alianza",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Azeroth",
+        "jefe": "Ascuas viles",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 114,
+      "nivel_requerido": 0,
+      "InventoryType": 6,
+      "estadisticas": {
+       "AGI": 25,
+       "HIT": 24,
+       "ARMOR": 364,
+       "AP": 50
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29516,
+      "nombre_es": "Cinturón de escamas abisales de ébano",
+      "nombre_en": "Ebon Netherscale Belt",
+      "ep": 115.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "CRIT": 22,
+       "STA": 21,
+       "INT": 14,
+       "ARMOR": 457,
+       "AP": 48,
+       "MP5": 10
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27760,
+      "nombre_es": "Fajín de viento de las dunas",
+      "nombre_en": "Dunewind Sash",
+      "ep": 114.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Sotiénaga (Heroico)",
+        "jefe": "Ghaz'an",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "AGI": 21,
+       "STA": 16,
+       "ARMOR": 164,
+       "AP": 50
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Legs": [
+     {
+      "id": 30535,
+      "nombre_es": "Falda de caminante del bosque",
+      "nombre_en": "Forestwalker Kilt",
+      "ep": 183.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Tumbas de Maná (Heroico)",
+        "jefe": "Príncipe-nexo Shaffar",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STR": 33,
+       "AGI": 31,
+       "STA": 24,
+       "INT": 27,
+       "ARMOR": 305
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STR": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 30538,
+      "nombre_es": "Musleras de medianoche",
+      "nombre_en": "Midnight Legguards",
+      "ep": 182.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Recinto de los Esclavos (Heroico)",
+        "jefe": "Quagmirran",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STA": 30,
+       "CRIT": 27,
+       "HIT": 17,
+       "ARMOR": 305,
+       "AP": 64
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 25687,
+      "nombre_es": "Leotardos de cuero vil",
+      "nombre_en": "Fel Leather Leggings",
+      "ep": 180.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Fel Leather Leggings (350) — Vendedor: Karaaz",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 112,
+      "nivel_requerido": 69,
+      "InventoryType": 7,
+      "estadisticas": {
+       "HIT": 25,
+       "CRIT": 25,
+       "ARMOR": 249,
+       "AP": 52
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "AP": 8
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 30533,
+      "nombre_es": "Quijotes de vencedor",
+      "nombre_en": "Vanquisher's Legplates",
+      "ep": 177.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Mechanar (Heroico)",
+        "jefe": "Pathaleon el Calculador",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STR": 36,
+       "STA": 36,
+       "CRIT": 23,
+       "ARMOR": 1216
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 31298,
+      "nombre_es": "Musleras de la Mano Destrozada",
+      "nombre_en": "Legguards of the Shattered Hand",
+      "ep": 173.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mundo",
+        "instancia": "Botín de mundo",
+        "jefe": "BoE / subasta",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "Las Salas Arrasadas",
+        "jefe": "Avizor Mano Destrozada",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "Las Salas Arrasadas",
+        "jefe": "Camorrista Mano Destrozada",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STR": 39,
+       "AGI": 32,
+       "HIT": 24,
+       "ARMOR": 1019
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 27487,
+      "nombre_es": "Quijotes de señor de sangre",
+      "nombre_en": "Bloodlord Legplates",
+      "ep": 169.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Horno de Sangre (Heroico)",
+        "jefe": "El Hacedor",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STR": 38,
+       "STA": 27,
+       "CRIT": 11,
+       "ARMOR": 1019
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Feet": [
+     {
+      "id": 25686,
+      "nombre_es": "Botas de cuero vil",
+      "nombre_en": "Fel Leather Boots",
+      "ep": 135.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Peletería",
+        "jefe": "Pattern: Fel Leather Boots (350) — Vendedor: Karaaz",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 112,
+      "nivel_requerido": 69,
+      "InventoryType": 8,
+      "estadisticas": {
+       "HIT": 25,
+       "CRIT": 17,
+       "ARMOR": 196,
+       "AP": 36
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "AP": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 28318,
+      "nombre_es": "Pisabarros de obsidiana",
+      "nombre_en": "Obsidian Clodstompers",
+      "ep": 126.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Invernáculo",
+        "jefe": "Gran botánico Freywinn",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Invernáculo (Heroico)",
+        "jefe": "Gran botánico Freywinn",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STR": 34,
+       "STA": 30,
+       "ARMOR": 800
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STR": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28176,
+      "nombre_es": "Grebas forjadas Sha'tari",
+      "nombre_en": "Sha'tari Wrought Greaves",
+      "ep": 124.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Auchindoun",
+        "jefe": "En el corazón del laberinto",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 0,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STR": 24,
+       "AGI": 21,
+       "STA": 22,
+       "ARMOR": 800
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "RES": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27867,
+      "nombre_es": "Botas del injusto",
+      "nombre_en": "Boots of the Unjust",
+      "ep": 106.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Criptas Auchenai (Heroico)",
+        "jefe": "Exarca Maladaar",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STA": 25,
+       "CRIT": 19,
+       "HIT": 13,
+       "ARMOR": 201,
+       "AP": 64
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27788,
+      "nombre_es": "Botas de guerra de jurasangre",
+      "nombre_en": "Bloodsworn Warboots",
+      "ep": 105.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Horno de Sangre (Heroico)",
+        "jefe": "Keli'dan el Ultrajador",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 112,
+      "nivel_requerido": 68,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STR": 31,
+       "STA": 29,
+       "HIT": 17,
+       "ARMOR": 780
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 30939,
+      "nombre_es": "Botas de pellejo de jabalí vil",
+      "nombre_en": "Felboar Hide Shoes",
+      "ep": 102.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Valle Sombraluna",
+        "jefe": "La Clave de Condenación: Tercer trozo recuperado",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 109,
+      "nivel_requerido": 0,
+      "InventoryType": 8,
+      "estadisticas": {
+       "AGI": 18,
+       "HIT": 9,
+       "STA": 15,
+       "ARMOR": 191,
+       "AP": 68
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Finger": [
+     {
+      "id": 30365,
+      "nombre_es": "Sello de sobrestante",
+      "nombre_en": "Overseer's Signet",
+      "ep": 96.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Tormenta Abisal",
+        "jefe": "El cierre de la Forja de Maná Ara",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 109,
+      "nivel_requerido": 0,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STR": 25,
+       "AGI": 15,
+       "HIT": 10
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29177,
+      "nombre_es": "Mando de A'dal",
+      "nombre_en": "A'dal's Command",
+      "ep": 91.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "vendedor",
+        "instancia": "Vendedor",
+        "jefe": "Almaador",
+        "nota": ""
+       }
+      ],
+      "reputacion": {
+       "faccion": "Los Sha'tar",
+       "faccion_en": "The Sha'tar",
+       "nivel": "Exaltado"
+      },
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STR": 29,
+       "AGI": 16,
+       "STA": 18
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 31380,
+      "nombre_es": "Marca del acróbata de los Sha'tar",
+      "nombre_en": "Acrobat's Mark of the Sha'tar",
+      "ep": 86.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Valle Sombraluna",
+        "jefe": "La batalla de la Atalaya Carmesí",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 109,
+      "nivel_requerido": 0,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STR": 29,
+       "AGI": 12
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 27904,
+      "nombre_es": "Anillo de gloria resonante",
+      "nombre_en": "Resounding Ring of Glory",
+      "ep": 84.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "Antiguas Laderas de Trabalomas (Heroico)",
+        "jefe": "Cazador de eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STR": 24,
+       "STA": 24,
+       "HIT": 15
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 30860,
+      "nombre_es": "Sello de Kaylaan",
+      "nombre_en": "Kaylaan's Signet",
+      "ep": 82.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Tormenta Abisal",
+        "jefe": "Golpe mortal a la Legión",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 109,
+      "nivel_requerido": 0,
+      "InventoryType": 11,
+      "estadisticas": {
+       "AGI": 15,
+       "HIT": 10,
+       "AP": 50
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 31077,
+      "nombre_es": "Marca de redención de destripador",
+      "nombre_en": "Slayer's Mark of the Redemption",
+      "ep": 82.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Valle Sombraluna",
+        "jefe": "Disensión en las filas…",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 109,
+      "nivel_requerido": 0,
+      "InventoryType": 11,
+      "estadisticas": {
+       "AGI": 15,
+       "HIT": 10,
+       "AP": 50
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Trinket": [
+     {
+      "id": 28288,
+      "nombre_es": "Ábaco de probabilidades agresivas",
+      "nombre_en": "Abacus of Violent Odds",
+      "ep": 96.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Mechanar",
+        "jefe": "Pathaleon el Calculador",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Mechanar (Heroico)",
+        "jefe": "Pathaleon el Calculador",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 64
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Uso: 260 HASTE durante 10 s cada 120 s = 21.7 de media"
+      ]
+     },
+     {
+      "id": 19406,
+      "nombre_es": "Dije de colmillo de draco",
+      "nombre_en": "Drake Fang Talisman",
+      "ep": 87.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "banda clásica",
+        "instancia": "Guarida Alanegra",
+        "jefe": "Ebanorroca",
+        "nota": "Banda clásica"
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": true,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 75,
+      "nivel_requerido": 60,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 56,
+       "HIT": 20,
+       "DODGE": 12
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28034,
+      "nombre_es": "Reloj de arena del liberador",
+      "nombre_en": "Hourglass of the Unraveller",
+      "ep": 85.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Ciénaga Negra",
+        "jefe": "Temporus",
+        "nota": ""
+       },
+       {
+        "categoria": "mazmorra",
+        "instancia": "La Ciénaga Negra (Heroico)",
+        "jefe": "Temporus",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 112,
+      "nivel_requerido": 68,
+      "InventoryType": 12,
+      "estadisticas": {
+       "CRIT": 32
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Probabilidad: 300 AP, 10 s cada ~60 s = 50.0 de media"
+      ]
+     },
+     {
+      "id": 29776,
+      "nombre_es": "Núcleo de Ar'kelos",
+      "nombre_en": "Core of Ar'kelos",
+      "ep": 85.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Tormenta Abisal",
+        "jefe": "Ar'kelos el Guardián",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 0,
+      "nivel_objeto": 108,
+      "nivel_requerido": 0,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 52
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Uso: 200 AP durante 20 s cada 120 s = 33.3 de media"
+      ]
+     },
+     {
+      "id": 24128,
+      "nombre_es": "Figurilla: pantera de ojo de noche",
+      "nombre_en": "Figurine - Nightseye Panther",
+      "ep": 75.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Joyería",
+        "jefe": "Design: Nightseye Panther (370) — Vendedor: Fedryen Lanza Presta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 54
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": 755,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Uso: 320 AP durante 12 s cada 180 s = 21.3 de media"
+      ]
+     },
+     {
+      "id": 25628,
+      "nombre_es": "Distintivo de destructor ogro",
+      "nombre_en": "Ogre Mauler's Badge",
+      "ep": 71.1,
+      "faccion": "Horda",
+      "fuentes": [
+       {
+        "categoria": "misión",
+        "instancia": "Misión: Nagrand",
+        "jefe": "Cajones de suministros Foso Sangrante",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": null,
+      "nivel_objeto": 102,
+      "nivel_requerido": 0,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 48
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Uso: 185 AP durante 15 s cada 120 s = 23.1 de media"
+      ]
+     }
+    ],
+    "Weapon": [
+     {
+      "id": 28429,
+      "nombre_es": "Campeón corazón de león",
+      "nombre_en": "Lionheart Champion",
+      "ep": 1043.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 123,
+      "nivel_requerido": 70,
+      "InventoryType": 17,
+      "estadisticas": {
+       "STR": 49,
+       "AGI": 44
+      },
+      "dps_arma": 118.61,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28435,
+      "nombre_es": "Cortaluna",
+      "nombre_en": "Mooncleaver",
+      "ep": 1034.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 123,
+      "nivel_requerido": 70,
+      "InventoryType": 17,
+      "estadisticas": {
+       "CRIT": 52,
+       "AP": 106
+      },
+      "dps_arma": 118.65,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28441,
+      "nombre_es": "Trueno profundo",
+      "nombre_en": "Deep Thunder",
+      "ep": 1004.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (375)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 123,
+      "nivel_requerido": 70,
+      "InventoryType": 17,
+      "estadisticas": {
+       "STR": 37,
+       "STA": 55,
+       "AGI": 37
+      },
+      "dps_arma": 118.55,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 23541,
+      "nombre_es": "Campeón de korio",
+      "nombre_en": "Khorium Champion",
+      "ep": 980.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Plans: Khorium Champion (365) — Botín de mundo: BoE / subasta",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 105,
+      "nivel_requerido": 70,
+      "InventoryType": 17,
+      "estadisticas": {
+       "STR": 50,
+       "HIT": 37
+      },
+      "dps_arma": 108.48,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": false,
+      "notas": []
+     },
+     {
+      "id": 28428,
+      "nombre_es": "Hoja de corazón de león",
+      "nombre_en": "Lionheart Blade",
+      "ep": 969.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (350)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 107,
+      "nivel_requerido": 70,
+      "InventoryType": 17,
+      "estadisticas": {
+       "STR": 47,
+       "AGI": 42
+      },
+      "dps_arma": 109.58,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 28434,
+      "nombre_es": "Hacha curva lunar",
+      "nombre_en": "Lunar Crescent",
+      "ep": 952.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "profesión",
+        "instancia": "Herrería",
+        "jefe": "Instructor (350)",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 107,
+      "nivel_requerido": 70,
+      "InventoryType": 17,
+      "estadisticas": {
+       "CRIT": 47,
+       "AP": 96
+      },
+      "dps_arma": 109.59,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Relic": [
+     {
+      "id": 27484,
+      "nombre_es": "Tratado sobre revancha",
+      "nombre_en": "Libram of Avengement",
+      "ep": 40.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "mazmorra",
+        "instancia": "El Horno de Sangre (Heroico)",
+        "jefe": "El Hacedor",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 115,
+      "nivel_requerido": 70,
+      "InventoryType": 28,
+      "estadisticas": {},
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Libro de Venganza: 53 índice de crítico 5 s tras cada Sentencia (cada 8 s) = ~33 de crítico de media"
+      ]
+     }
+    ]
+   },
+   "insignias": {
+    "Head": [
+     {
+      "id": 33810,
+      "nombre_es": "Máscara de muerte Amani",
+      "nombre_en": "Amani Mask of Death",
+      "ep": 229.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STR": 46,
+       "STA": 51,
+       "HIT": 33,
+       "ARMOR": 1306
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 32087,
+      "nombre_es": "Máscara del Falsario",
+      "nombre_en": "Mask of the Deceiver",
+      "ep": 214.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "AGI": 32,
+       "STA": 36,
+       "HIT": 16,
+       "ARMOR": 283,
+       "AP": 64
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "AGI": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 32088,
+      "nombre_es": "Capucha de ira bestial",
+      "nombre_en": "Cowl of Beastly Rage",
+      "ep": 203.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STR": 29,
+       "AGI": 30,
+       "STA": 27,
+       "INT": 20,
+       "ARMOR": 283
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "STR": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 32085,
+      "nombre_es": "Yelmo de acechador de distorsión",
+      "nombre_en": "Warpstalker Helm",
+      "ep": 168.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "AGI": 24,
+       "STA": 36,
+       "INT": 32,
+       "ARMOR": 632,
+       "AP": 48
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "MP5": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 32086,
+      "nombre_es": "Casco de maestro de tormentas",
+      "nombre_en": "Storm Master's Helmet",
+      "ep": 132.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STA": 24,
+       "INT": 32,
+       "CRIT": 24,
+       "ARMOR": 632,
+       "SP": 37
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "meta",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 32089,
+      "nombre_es": "Capucha de ligadores de maná",
+      "nombre_en": "Mana-Binders Cowl",
+      "ep": 120.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 1,
+      "estadisticas": {
+       "STA": 38,
+       "INT": 29,
+       "CRIT": 15,
+       "ARMOR": 151,
+       "SP": 34
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "meta"
+      ],
+      "bonificacion_ranura": {
+       "SP": 5
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Neck": [
+     {
+      "id": 29381,
+      "nombre_es": "Gargantilla del propósito maligno",
+      "nombre_en": "Choker of Vile Intent",
+      "ep": 93.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "AGI": 20,
+       "STA": 18,
+       "HIT": 18,
+       "AP": 42
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33296,
+      "nombre_es": "Broche de destreza",
+      "nombre_en": "Brooch of Deftness",
+      "ep": 71.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "STA": 48,
+       "HIT": 22,
+       "EXP": 21
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29386,
+      "nombre_es": "Collar del gigante",
+      "nombre_en": "Necklace of the Juggernaut",
+      "ep": 21.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "AGI": 19,
+       "STA": 33,
+       "DEF": 22
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29368,
+      "nombre_es": "Colgante borbotón de maná",
+      "nombre_en": "Manasurge Pendant",
+      "ep": 12.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "STA": 24,
+       "INT": 22,
+       "SP": 28
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29374,
+      "nombre_es": "Collar de esperanza eterna",
+      "nombre_en": "Necklace of Eternal Hope",
+      "ep": 11.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 2,
+      "estadisticas": {
+       "STA": 22,
+       "INT": 21,
+       "SP": 26,
+       "MP5": 5
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Shoulder": [
+     {
+      "id": 33514,
+      "nombre_es": "Espaldares de destino truculento",
+      "nombre_en": "Pauldrons of Gruesome Fate",
+      "ep": 158.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "STR": 42,
+       "HIT": 23,
+       "STA": 33,
+       "ARMOR": 1206,
+       "ARP": 22
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33973,
+      "nombre_es": "Espaldares de furia tribal",
+      "nombre_en": "Pauldrons of Tribal Fury",
+      "ep": 97.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "STA": 21,
+       "INT": 23,
+       "HIT": 26,
+       "ARMOR": 303,
+       "SP": 39
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "SP": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33970,
+      "nombre_es": "Espaldares de los elementos furiosos",
+      "nombre_en": "Pauldrons of the Furious Elements",
+      "ep": 65.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "STA": 28,
+       "INT": 24,
+       "HASTE": 33,
+       "ARMOR": 675,
+       "SP": 40
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33287,
+      "nombre_es": "Espaldares de maderaférrea nudosa",
+      "nombre_en": "Gnarled Ironwood Pauldrons",
+      "ep": 56.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 3,
+      "estadisticas": {
+       "STA": 21,
+       "INT": 23,
+       "SPI": 26,
+       "ARMOR": 303,
+       "SP": 39
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "SP": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Back": [
+     {
+      "id": 33484,
+      "nombre_es": "Abrazo de Dory",
+      "nombre_en": "Dory's Embrace",
+      "ep": 80.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 136,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 34,
+       "RES": 20,
+       "CRIT": 20,
+       "ARMOR": 114,
+       "AP": 46,
+       "ARP": 17
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29382,
+      "nombre_es": "Capa de guerra de Caballero de sangre",
+      "nombre_en": "Blood Knight War Cloak",
+      "ep": 74.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "AGI": 23,
+       "STA": 22,
+       "ARMOR": 93,
+       "AP": 48
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 35321,
+      "nombre_es": "Capa de prontitud Arcana",
+      "nombre_en": "Cloak of Arcane Alacrity",
+      "ep": 34.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 136,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 34,
+       "RES": 23,
+       "HASTE": 16,
+       "INT": 15,
+       "ARMOR": 114,
+       "SP": 27
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 35324,
+      "nombre_es": "Capa de indulto presto",
+      "nombre_en": "Cloak of Swift Reprieve",
+      "ep": 34.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 5,
+      "nivel_objeto": 136,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 34,
+       "RES": 23,
+       "INT": 15,
+       "HASTE": 16,
+       "ARMOR": 114,
+       "SP": 27
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29369,
+      "nombre_es": "Chal de probabilidades cambiantes",
+      "nombre_en": "Shawl of Shifting Probabilities",
+      "ep": 33.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 18,
+       "INT": 16,
+       "CRIT": 22,
+       "ARMOR": 93,
+       "SP": 21
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33304,
+      "nombre_es": "Capa de poder subyugado",
+      "nombre_en": "Cloak of Subjugated Power",
+      "ep": 28.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 136,
+      "nivel_requerido": 70,
+      "InventoryType": 16,
+      "estadisticas": {
+       "STA": 34,
+       "RES": 23,
+       "CRIT": 16,
+       "INT": 15,
+       "ARMOR": 114,
+       "SP": 27
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Chest": [
+     {
+      "id": 33579,
+      "nombre_es": "Vestimentas de hibernación",
+      "nombre_en": "Vestments of Hibernation",
+      "ep": 185.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "STR": 46,
+       "AGI": 45,
+       "STA": 51,
+       "INT": 13,
+       "ARMOR": 404,
+       "ARP": 22
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33522,
+      "nombre_es": "Coselete del guardián estoico",
+      "nombre_en": "Chestguard of the Stoic Guardian",
+      "ep": 156.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "STA": 60,
+       "DEF": 22,
+       "DODGE": 30,
+       "STR": 38,
+       "ARMOR": 1607
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33566,
+      "nombre_es": "Cuberturas de elunita benditas",
+      "nombre_en": "Blessed Elunite Coverings",
+      "ep": 108.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "INT": 34,
+       "STA": 33,
+       "CRIT": 22,
+       "ARMOR": 404,
+       "SP": 54,
+       "MP5": 9
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "SP": 5
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33965,
+      "nombre_es": "Camisote de los elementos furiosos",
+      "nombre_en": "Hauberk of the Furious Elements",
+      "ep": 100.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 5,
+      "estadisticas": {
+       "STA": 39,
+       "INT": 34,
+       "HASTE": 35,
+       "CRIT": 23,
+       "ARMOR": 900,
+       "SP": 54
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Wrist": [
+     {
+      "id": 33580,
+      "nombre_es": "Sortija de la zarpa presta",
+      "nombre_en": "Band of the Swift Paw",
+      "ep": 112.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STR": 26,
+       "AGI": 22,
+       "STA": 31,
+       "INT": 10,
+       "ARMOR": 177
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STR": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33540,
+      "nombre_es": "Cubremuñecas de maestro asesino",
+      "nombre_en": "Master Assassin Wristwraps",
+      "ep": 109.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "AGI": 17,
+       "STA": 22,
+       "CRIT": 18,
+       "ARMOR": 177,
+       "AP": 50
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33513,
+      "nombre_es": "Grilletes de ira de eternio",
+      "nombre_en": "Eternium Rage-shackles",
+      "ep": 97.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STR": 32,
+       "STA": 32,
+       "ARMOR": 703,
+       "ARP": 22
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33529,
+      "nombre_es": "Brazales estabilizantes",
+      "nombre_en": "Steadying Bracers",
+      "ep": 84.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "AGI": 18,
+       "STA": 21,
+       "INT": 19,
+       "ARMOR": 394,
+       "AP": 50,
+       "ARP": 15
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33516,
+      "nombre_es": "Brazales de antigua Falange",
+      "nombre_en": "Bracers of the Ancient Phalanx",
+      "ep": 81.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STA": 45,
+       "DEF": 14,
+       "EXP": 15,
+       "STR": 22,
+       "ARMOR": 703
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33578,
+      "nombre_es": "Brazaletes del protector kaldorei",
+      "nombre_en": "Armwraps of the Kaldorei Protector",
+      "ep": 54.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 9,
+      "estadisticas": {
+       "STA": 19,
+       "INT": 22,
+       "CRIT": 20,
+       "ARMOR": 177,
+       "SP": 26
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "SP": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Hands": [
+     {
+      "id": 33512,
+      "nombre_es": "Mandiletes mortales furiosos",
+      "nombre_en": "Furious Deathgrips",
+      "ep": 168.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STR": 34,
+       "STA": 37,
+       "HIT": 25,
+       "ARMOR": 1005
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STR": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33528,
+      "nombre_es": "Guanteletes de francotirador",
+      "nombre_en": "Gauntlets of Sniping",
+      "ep": 154.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "AGI": 20,
+       "STA": 27,
+       "INT": 20,
+       "HIT": 19,
+       "ARMOR": 562,
+       "AP": 58
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "AP": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33539,
+      "nombre_es": "Dedos pringosos de timador",
+      "nombre_en": "Trickster's Stickyfingers",
+      "ep": 139.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "AGI": 30,
+       "STA": 28,
+       "HASTE": 25,
+       "ARMOR": 252,
+       "AP": 68
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33517,
+      "nombre_es": "Guanteletes nudillóseo",
+      "nombre_en": "Bonefist Gauntlets",
+      "ep": 116.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STA": 51,
+       "PARRY": 21,
+       "STR": 30,
+       "ARMOR": 1005
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33586,
+      "nombre_es": "Rollitos del aplicado",
+      "nombre_en": "Studious Wraps",
+      "ep": 84.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STA": 21,
+       "INT": 22,
+       "CRIT": 25,
+       "ARMOR": 135,
+       "SP": 40
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "SP": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33534,
+      "nombre_es": "Mandiletes de cólera de la Naturaleza",
+      "nombre_en": "Grips of Nature's Wrath",
+      "ep": 79.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 10,
+      "estadisticas": {
+       "STA": 30,
+       "INT": 27,
+       "CRIT": 21,
+       "ARMOR": 562,
+       "SP": 34
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "SP": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Waist": [
+     {
+      "id": 33583,
+      "nombre_es": "Guardarrenes de la gran bestia",
+      "nombre_en": "Waistguard of the Great Beast",
+      "ep": 174.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STR": 29,
+       "AGI": 28,
+       "STA": 37,
+       "HIT": 18,
+       "ARMOR": 227
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "STR": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33331,
+      "nombre_es": "Cadena de ira desatada",
+      "nombre_en": "Chain of Unleashed Rage",
+      "ep": 164.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STR": 34,
+       "STA": 37,
+       "HIT": 14,
+       "ARMOR": 904,
+       "ARP": 22
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33524,
+      "nombre_es": "Faja del protector",
+      "nombre_en": "Girdle of the Protector",
+      "ep": 119.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STA": 40,
+       "DODGE": 27,
+       "DEF": 11,
+       "HIT": 18,
+       "STR": 20,
+       "ARMOR": 904
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STA": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33536,
+      "nombre_es": "Fajín de truenos",
+      "nombre_en": "Stormwrap",
+      "ep": 100.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STA": 21,
+       "INT": 26,
+       "CRIT": 22,
+       "HIT": 13,
+       "ARMOR": 506,
+       "SP": 34
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "SP": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33280,
+      "nombre_es": "Lazada con plumas de guerra",
+      "nombre_en": "War-Feathered Loop",
+      "ep": 100.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "AGI": 29,
+       "STA": 36,
+       "INT": 28,
+       "ARMOR": 506,
+       "AP": 56,
+       "ARP": 10
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33279,
+      "nombre_es": "Faja de colmillo de hierro",
+      "nombre_en": "Iron-tusk Girdle",
+      "ep": 96.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 6,
+      "estadisticas": {
+       "STA": 45,
+       "DODGE": 22,
+       "DEF": 21,
+       "STR": 22,
+       "ARMOR": 904
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "DODGE": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Legs": [
+     {
+      "id": 33501,
+      "nombre_es": "Grebas de guerra de sediento de sangre",
+      "nombre_en": "Bloodthirster's Wargreaves",
+      "ep": 237.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STR": 46,
+       "HIT": 38,
+       "STA": 43,
+       "ARMOR": 1406
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STR": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33538,
+      "nombre_es": "Calzas de tumba poco profunda",
+      "nombre_en": "Shallow-grave Trousers",
+      "ep": 187.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "AGI": 45,
+       "STA": 46,
+       "HASTE": 30,
+       "ARMOR": 353,
+       "AP": 92
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33527,
+      "nombre_es": "Pantalones de camuflaje cambiante",
+      "nombre_en": "Shifting Camouflage Pants",
+      "ep": 151.1,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "AGI": 34,
+       "STA": 45,
+       "INT": 30,
+       "ARMOR": 787,
+       "AP": 90,
+       "ARP": 25
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33515,
+      "nombre_es": "Musleras antititubeo",
+      "nombre_en": "Unwavering Legguards",
+      "ep": 126.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STA": 73,
+       "DEF": 22,
+       "BLOCK": 30,
+       "STR": 26,
+       "ARMOR": 1406,
+       "BLOCKV": 78
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 6
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33518,
+      "nombre_es": "Quijotes de justicar supremo",
+      "nombre_en": "High Justicar's Legplates",
+      "ep": 109.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STA": 33,
+       "INT": 37,
+       "CRIT": 23,
+       "ARMOR": 1406,
+       "SP": 54
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "SP": 5
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33530,
+      "nombre_es": "Leotardos de vida natural",
+      "nombre_en": "Natural Life Leggings",
+      "ep": 101.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 7,
+      "estadisticas": {
+       "STA": 45,
+       "INT": 38,
+       "CRIT": 17,
+       "ARMOR": 787,
+       "SP": 47,
+       "MP5": 9
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "amarilla",
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "MP5": 2
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Feet": [
+     {
+      "id": 33222,
+      "nombre_es": "Botas atigradas de Nyn'jah",
+      "nombre_en": "Nyn'jah's Tabi Boots",
+      "ep": 168.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "AGI": 29,
+       "STA": 21,
+       "HIT": 22,
+       "ARMOR": 278,
+       "AP": 60
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33582,
+      "nombre_es": "Borceguíes de usurpación salvaje",
+      "nombre_en": "Footwraps of Wild Encroachment",
+      "ep": 156.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STR": 29,
+       "AGI": 33,
+       "STA": 28,
+       "INT": 19,
+       "ARMOR": 278
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "STR": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33523,
+      "nombre_es": "Escarpes del defensor recto",
+      "nombre_en": "Sabatons of the Righteous Defender",
+      "ep": 119.7,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STA": 45,
+       "DEF": 18,
+       "HIT": 18,
+       "STR": 20,
+       "ARMOR": 1105,
+       "BLOCKV": 30
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "azul"
+      ],
+      "bonificacion_ranura": {
+       "STA": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33577,
+      "nombre_es": "Botos de luna",
+      "nombre_en": "Moon-walkers",
+      "ep": 92.2,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 3,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STA": 30,
+       "INT": 28,
+       "HIT": 20,
+       "ARMOR": 278,
+       "SP": 34
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "roja"
+      ],
+      "bonificacion_ranura": {
+       "HIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33537,
+      "nombre_es": "Botines de truenos retumbantes",
+      "nombre_en": "Treads of Booming Thunder",
+      "ep": 74.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STA": 21,
+       "INT": 33,
+       "CRIT": 14,
+       "ARMOR": 619,
+       "SP": 40
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "roja",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "CRIT": 3
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 33324,
+      "nombre_es": "Botines del camino vital",
+      "nombre_en": "Treads of the Life Path",
+      "ep": 58.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 128,
+      "nivel_requerido": 70,
+      "InventoryType": 8,
+      "estadisticas": {
+       "STA": 21,
+       "INT": 33,
+       "ARMOR": 619,
+       "MP5": 8,
+       "SP": 40
+      },
+      "dps_arma": null,
+      "ranuras": [
+       "azul",
+       "amarilla"
+      ],
+      "bonificacion_ranura": {
+       "SP": 4
+      },
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Finger": [
+     {
+      "id": 29379,
+      "nombre_es": "Anillo de los señores de la guerra de Arathi",
+      "nombre_en": "Ring of Arathi Warlords",
+      "ep": 71.8,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STA": 24,
+       "CRIT": 23,
+       "AP": 46
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29367,
+      "nombre_es": "Anillo de sueños crípticos",
+      "nombre_en": "Ring of Cryptic Dreams",
+      "ep": 32.4,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STA": 16,
+       "INT": 17,
+       "CRIT": 20,
+       "SP": 23
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29373,
+      "nombre_es": "Sortija de Halos",
+      "nombre_en": "Band of Halos",
+      "ep": 11.6,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 11,
+      "estadisticas": {
+       "STA": 22,
+       "INT": 21,
+       "SP": 25,
+       "MP5": 8
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     }
+    ],
+    "Trinket": [
+     {
+      "id": 29383,
+      "nombre_es": "Broche de Ansia de Sangre",
+      "nombre_en": "Bloodlust Brooch",
+      "ep": 118.3,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 72
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Uso: 278 AP durante 20 s cada 120 s = 46.3 de media"
+      ]
+     },
+     {
+      "id": 33832,
+      "nombre_es": "Determinación de maestro de batalla",
+      "nombre_en": "Battlemaster's Determination",
+      "ep": 80.0,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 133,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "AP": 80
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 35326,
+      "nombre_es": "Prontitud de maestro de batalla",
+      "nombre_en": "Battlemaster's Alacrity",
+      "ep": 59.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 5,
+      "nivel_objeto": 133,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "HASTE": 40
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 34162,
+      "nombre_es": "Depravación de maestro de batalla",
+      "nombre_en": "Battlemaster's Depravity",
+      "ep": 44.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 133,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "CRIT": 40
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 34163,
+      "nombre_es": "Crueldad de maestro de batalla",
+      "nombre_en": "Battlemaster's Cruelty",
+      "ep": 44.9,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 4,
+      "nivel_objeto": 133,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "CRIT": 40
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": []
+     },
+     {
+      "id": 29370,
+      "nombre_es": "Icono de media luna de plata",
+      "nombre_en": "Icon of the Silver Crescent",
+      "ep": 22.5,
+      "faccion": "Ambas",
+      "fuentes": [
+       {
+        "categoria": "insignias",
+        "instancia": "Insignias de justicia",
+        "jefe": "G'eras",
+        "nota": ""
+       }
+      ],
+      "reputacion": null,
+      "banda_clasica": false,
+      "fase_tbc_original": 1,
+      "nivel_objeto": 110,
+      "nivel_requerido": 70,
+      "InventoryType": 12,
+      "estadisticas": {
+       "SP": 44
+      },
+      "dps_arma": null,
+      "ranuras": [],
+      "bonificacion_ranura": null,
+      "requiere_profesion": null,
+      "ligado_al_recoger": true,
+      "notas": [
+       "Uso: 158 SP durante 20 s cada 120 s = 26.3 de media"
+      ]
+     }
+    ],
+    "Weapon": [],
+    "Relic": []
+   },
+   "gemas": {
+    "meta": {
+     "id": 34220,
+     "nombre": "Chaotic Skyfire Diamond",
+     "requisito": {
+      "min": {
+       "B": 2
+      }
+     },
+     "extra": "3 % daño crítico",
+     "fuente": "Diseño 34689 (365): Terrallende — Sirena Cicatriz Espiral",
+     "colores_conseguidos": {
+      "R": 8,
+      "Y": 1,
+      "B": 2
+     },
+     "valor_extra": [
+      55,
+      "3 % de daño crítico, igual que la Relentless"
+     ]
+    },
+    "alternativas_meta": [
+     {
+      "id": 32409,
+      "nombre": "Relentless Earthstorm Diamond",
+      "ep_total_con_gemas": 397.3
+     },
+     {
+      "id": 25894,
+      "nombre": "Swift Skyfire Diamond",
+      "ep_total_con_gemas": 362.8
+     },
+     {
+      "id": 25895,
+      "nombre": "Enigmatic Skyfire Diamond",
+      "ep_total_con_gemas": 357.9
+     }
+    ],
+    "por_objeto": {
+     "28182": [
+      24027
+     ],
+     "33173": [
+      24027,
+      24027
+     ],
+     "33122": [
+      24027
+     ],
+     "28484": [
+      24027,
+      24027,
+      24027
+     ],
+     "27497": [
+      24027,
+      24027,
+      24027
+     ],
+     "27755": [
+      24027,
+      24027
+     ],
+     "30535": [
+      24027,
+      24054,
+      24054
+     ],
+     "25686": [
+      24058,
+      24027
+     ]
+    },
+    "gemas_permitidas": {
+     "24027": {
+      "nombre": "Bold Living Ruby",
+      "fuente": "Diseño 24193 (350): Botín de mundo — BoE / subasta"
+     },
+     "24028": {
+      "nombre": "Delicate Living Ruby",
+      "fuente": "Diseño 24194 (350): Botín de mundo — BoE / subasta"
+     },
+     "24030": {
+      "nombre": "Runed Living Ruby",
+      "fuente": "Diseño 24196 (350): Botín de mundo — BoE / subasta"
+     },
+     "24031": {
+      "nombre": "Bright Living Ruby",
+      "fuente": "Diseño 24192 (350): Botín de mundo — BoE / subasta"
+     },
+     "24032": {
+      "nombre": "Subtle Living Ruby",
+      "fuente": "Diseño 24197 (350): Botín de mundo — BoE / subasta"
+     },
+     "24036": {
+      "nombre": "Flashing Living Ruby",
+      "fuente": "Diseño 24198 (350): Botín de mundo — BoE / subasta"
+     },
+     "24047": {
+      "nombre": "Brilliant Dawnstone",
+      "fuente": "Diseño 24203 (350): Botín de mundo — BoE / subasta"
+     },
+     "24048": {
+      "nombre": "Smooth Dawnstone",
+      "fuente": "Diseño 24204 (350): Botín de mundo — BoE / subasta"
+     },
+     "24051": {
+      "nombre": "Rigid Dawnstone",
+      "fuente": "Diseño 24205 (350): Botín de mundo — BoE / subasta"
+     },
+     "24052": {
+      "nombre": "Thick Dawnstone",
+      "fuente": "Diseño 24207 (350): Botín de mundo — BoE / subasta"
+     },
+     "24033": {
+      "nombre": "Solid Star of Elune",
+      "fuente": "Diseño 24199 (350): Botín de mundo — BoE / subasta"
+     },
+     "24035": {
+      "nombre": "Sparkling Star of Elune",
+      "fuente": "Diseño 24200 (350): Botín de mundo — BoE / subasta"
+     },
+     "24037": {
+      "nombre": "Lustrous Star of Elune",
+      "fuente": "Diseño 24201 (350): Botín de mundo — BoE / subasta"
+     },
+     "24058": {
+      "nombre": "Inscribed Noble Topaz",
+      "fuente": "Diseño 24213 (350): Botín de mundo — BoE / subasta"
+     },
+     "24061": {
+      "nombre": "Glinting Noble Topaz",
+      "fuente": "Diseño 24216 (350): Botín de mundo — BoE / subasta"
+     },
+     "24059": {
+      "nombre": "Potent Noble Topaz",
+      "fuente": "Diseño 24214 (350): Botín de mundo — BoE / subasta"
+     },
+     "24060": {
+      "nombre": "Luminous Noble Topaz",
+      "fuente": "Diseño 24215 (350): Botín de mundo — BoE / subasta"
+     },
+     "31867": {
+      "nombre": "Veiled Noble Topaz",
+      "fuente": "Diseño 31878 (350): Botín de mundo — BoE / subasta"
+     },
+     "31868": {
+      "nombre": "Wicked Noble Topaz",
+      "fuente": "Diseño 31879 (350): Botín de mundo — BoE / subasta"
+     },
+     "24054": {
+      "nombre": "Sovereign Nightseye",
+      "fuente": "Diseño 24209 (350): Botín de mundo — BoE / subasta"
+     },
+     "24055": {
+      "nombre": "Shifting Nightseye",
+      "fuente": "Diseño 24210 (350): Botín de mundo — BoE / subasta"
+     },
+     "24056": {
+      "nombre": "Glowing Nightseye",
+      "fuente": "Diseño 24211 (350): Botín de mundo — BoE / subasta"
+     },
+     "24057": {
+      "nombre": "Royal Nightseye",
+      "fuente": "Diseño 24212 (350): Botín de mundo — BoE / subasta"
+     },
+     "31863": {
+      "nombre": "Balanced Nightseye",
+      "fuente": "Diseño 31876 (350): Botín de mundo — BoE / subasta"
+     },
+     "24065": {
+      "nombre": "Dazzling Talasite",
+      "fuente": "Diseño 24219 (350): Botín de mundo — BoE / subasta"
+     },
+     "24062": {
+      "nombre": "Enduring Talasite",
+      "fuente": "Diseño 24217 (350): Botín de mundo — BoE / subasta"
+     },
+     "24067": {
+      "nombre": "Jagged Talasite",
+      "fuente": "Diseño 24220 (350): Botín de mundo — BoE / subasta"
+     }
+    },
+    "gemas_excluidas": {
+     "35315": {
+      "nombre": "Quick Dawnstone",
+      "motivo": "Diseño [35322] no conseguible en la prefase"
+     },
+     "35316": {
+      "nombre": "Reckless Noble Topaz",
+      "motivo": "Diseño [35323] no conseguible en la prefase"
+     },
+     "35707": {
+      "nombre": "Regal Nightseye",
+      "motivo": "Diseño [35708] no conseguible en la prefase"
+     },
+     "35318": {
+      "nombre": "Forceful Talasite",
+      "motivo": "Diseño [35325] no conseguible en la prefase"
+     }
+    }
+   },
+   "encantamientos": {
+    "Head": [
+     {
+      "nombre": "Arcanum of Ferocity",
+      "spell": 35452,
+      "item": 29192,
+      "ep": 59.5,
+      "comprobacion": "Objeto 29192: Vendedor — Fedryen Lanza Presta"
+     },
+     {
+      "nombre": "Arcanum of the Outcast",
+      "spell": 37891,
+      "item": 30846,
+      "ep": 45.4,
+      "comprobacion": "Objeto 30846: Vendedor — Nakodu"
+     },
+     {
+      "nombre": "Arcanum of Power",
+      "spell": 35447,
+      "item": 29191,
+      "ep": 29.3,
+      "comprobacion": "Objeto 29191: Vendedor — Almaador"
+     }
+    ],
+    "Shoulder": [
+     {
+      "nombre": "Greater Inscription of Vengeance",
+      "spell": 35417,
+      "item": 28888,
+      "ep": 41.2,
+      "comprobacion": "Objeto 28888: Vendedor — Escriba Saalyn"
+     },
+     {
+      "nombre": "Greater Inscription of the Blade",
+      "spell": 35437,
+      "item": 28910,
+      "ep": 36.8,
+      "comprobacion": "Objeto 28910: Vendedor — Escriba Veredis"
+     },
+     {
+      "nombre": "Greater Inscription of the Orb",
+      "spell": 35437,
+      "item": 28909,
+      "ep": 20.7,
+      "comprobacion": "Objeto 28909: Vendedor — Escriba Veredis"
+     }
+    ],
+    "Back": [
+     {
+      "nombre": "Enchant Cloak - Greater Agility",
+      "spell": 34004,
+      "item": null,
+      "ep": 13.6,
+      "comprobacion": "Instructor de encantamiento (habilidad 310)"
+     },
+     {
+      "nombre": "Enchant Cloak - Lesser Agility",
+      "spell": 13882,
+      "item": 11206,
+      "ep": 3.4,
+      "comprobacion": "Objeto 11206: Botín de mundo — BoE / subasta"
+     }
+    ],
+    "Chest": [
+     {
+      "nombre": "Chest - Exceptional Stats",
+      "spell": 27960,
+      "item": 24003,
+      "ep": 22.9,
+      "comprobacion": "Objeto 24003: Vendedor — Intendente Urgronn"
+     },
+     {
+      "nombre": "Chest - Restore Mana Prime",
+      "spell": 33991,
+      "item": null,
+      "ep": 0.3,
+      "comprobacion": "Instructor de encantamiento (habilidad 300)"
+     }
+    ],
+    "Wrist": [
+     {
+      "nombre": "Bracer - Brawn",
+      "spell": 27899,
+      "item": null,
+      "ep": 30.4,
+      "comprobacion": "Instructor de encantamiento (habilidad 305)"
+     },
+     {
+      "nombre": "Bracer - Assault",
+      "spell": 34002,
+      "item": null,
+      "ep": 24.0,
+      "comprobacion": "Instructor de encantamiento (habilidad 300)"
+     },
+     {
+      "nombre": "Bracer - Stats",
+      "spell": 27905,
+      "item": null,
+      "ep": 15.2,
+      "comprobacion": "Instructor de encantamiento (habilidad 315)"
+     }
+    ],
+    "Hands": [
+     {
+      "nombre": "Gloves - Major Strength",
+      "spell": 33995,
+      "item": null,
+      "ep": 37.9,
+      "comprobacion": "Instructor de encantamiento (habilidad 340)"
+     },
+     {
+      "nombre": "Gloves - Spell Strike",
+      "spell": 33994,
+      "item": 28271,
+      "ep": 23.9,
+      "comprobacion": "Objeto 28271: Vendedor — Fedryen Lanza Presta"
+     },
+     {
+      "nombre": "Gloves - Major Agility",
+      "spell": 25080,
+      "item": 33152,
+      "ep": 16.9,
+      "comprobacion": "Objeto 33152: Vendedor — Alurmi"
+     }
+    ],
+    "Legs": [
+     {
+      "nombre": "Nethercobra Leg Armor",
+      "spell": 35490,
+      "item": 29535,
+      "ep": 63.5,
+      "comprobacion": "Objeto 29535: Peletería — Pattern: Nethercobra Leg Armor (365) — Vendedor: Oficial de logística Ulrike"
+     },
+     {
+      "nombre": "Cobrahide Leg Armor",
+      "spell": 35488,
+      "item": 29533,
+      "ep": 51.2,
+      "comprobacion": "Objeto 29533: Peletería — Pattern: Cobrahide Leg Armor (335) — Vendedor: Oficial de logística Ulrike"
+     },
+     {
+      "nombre": "Nethercleft Leg Armor",
+      "spell": 35495,
+      "item": 29536,
+      "ep": 13.6,
+      "comprobacion": "Objeto 29536: Peletería — Pattern: Nethercleft Leg Armor (365) — Vendedor: Fedryen Lanza Presta"
+     }
+    ],
+    "Feet": [
+     {
+      "nombre": "Enchant Boots - Dexterity",
+      "spell": 27951,
+      "item": 22544,
+      "ep": 13.6,
+      "comprobacion": "Objeto 22544: Criptas Auchenai — Esqueleto enfurecido"
+     },
+     {
+      "nombre": "Enchant Boots - Cat's Swiftness",
+      "spell": 34007,
+      "item": 28279,
+      "ep": 6.8,
+      "comprobacion": "Objeto 28279: Botín de mundo — BoE / subasta"
+     },
+     {
+      "nombre": "Enchant Boots - Vitality",
+      "spell": 27948,
+      "item": 35298,
+      "ep": 0.2,
+      "comprobacion": "Fórmula 22542 (305): Botín de mundo — BoE / subasta"
+     }
+    ],
+    "Weapon": [
+     {
+      "nombre": "Savagery",
+      "spell": 27971,
+      "item": 22554,
+      "ep": 70.0,
+      "comprobacion": "Objeto 22554: Las Salas Arrasadas — Centurión Mano Destrozada"
+     },
+     {
+      "nombre": "Crusader",
+      "spell": 20034,
+      "item": 16252,
+      "ep": 60,
+      "comprobacion": "Objeto 16252: Reinos del Este — Vinculahechizos escarlata; Cruzado: 100 Fuerza 15 s, 1 PPM; en 3.3.5a el efecto baja con el nivel por encima de 60 (estimación)"
+     },
+     {
+      "nombre": "Agility",
+      "spell": 23800,
+      "item": 19445,
+      "ep": 16.9,
+      "comprobacion": "Objeto 19445: Vendedor — Meilosh"
+     }
+    ]
+   },
+   "totales_equipo": {
+    "AGI": 190,
+    "STA": 235,
+    "HIT": 131,
+    "ARMOR": 5271,
+    "AP": 412,
+    "STR": 493,
+    "CRIT": 155,
+    "INT": 46,
+    "HASTE": 21.666666666666668,
+    "DODGE": 12,
+    "SPI": 6
+   },
+   "valor_equipo": 3340.8,
+   "equipo_elegido": [
+    28182,
+    31275,
+    33173,
+    33122,
+    28484,
+    23537,
+    27497,
+    27755,
+    30535,
+    25686,
+    30365,
+    29177,
+    28288,
+    19406,
+    28429,
+    27484
+   ],
+   "glifos": [
+    {
+     "tipo": "Mayor",
+     "nombre_en": "Glyph of Seal of Vengeance",
+     "id": 43869,
+     "nombre_es": "Glifo de Sello de venganza",
+     "efecto": "+10 de pericia con el sello activo; baja el tope de pericia",
+     "nota": "Sin Spell.dbc no se pueden ver los reactivos: muchos glifos piden Tinta del mar (hierbas de Rasganorte). Usar solo si el servidor los vende o permite fabricarlos."
+    },
+    {
+     "tipo": "Mayor",
+     "nombre_en": "Glyph of Judgement",
+     "id": 41092,
+     "nombre_es": "Glifo de Sentencia",
+     "efecto": "+10 % al daño de Sentencia",
+     "nota": "Sin Spell.dbc no se pueden ver los reactivos: muchos glifos piden Tinta del mar (hierbas de Rasganorte). Usar solo si el servidor los vende o permite fabricarlos."
+    },
+    {
+     "tipo": "Mayor",
+     "nombre_en": "Glyph of Exorcism",
+     "id": 41103,
+     "nombre_es": "Glifo de Exorcismo",
+     "efecto": "+20 % al daño de Exorcismo (con El arte de la guerra)",
+     "nota": "Sin Spell.dbc no se pueden ver los reactivos: muchos glifos piden Tinta del mar (hierbas de Rasganorte). Usar solo si el servidor los vende o permite fabricarlos."
+    },
+    {
+     "tipo": "Menor",
+     "nombre_en": "Glyph of Blessing of Might",
+     "id": 43340,
+     "nombre_es": "Glifo de Bendición de poderío",
+     "efecto": "comodidad: Bendición de poderío dura 30 min",
+     "nota": "Sin Spell.dbc no se pueden ver los reactivos: muchos glifos piden Tinta del mar (hierbas de Rasganorte). Usar solo si el servidor los vende o permite fabricarlos."
+    },
+    {
+     "tipo": "Menor",
+     "nombre_en": "Glyph of Sense Undead",
+     "id": 43368,
+     "nombre_es": "Glifo de Captar no-muertos",
+     "efecto": "+1 % de daño contra no-muertos",
+     "nota": "Sin Spell.dbc no se pueden ver los reactivos: muchos glifos piden Tinta del mar (hierbas de Rasganorte). Usar solo si el servidor los vende o permite fabricarlos."
+    }
+   ],
+   "original_tbc": {
+    "Head": [
+     32461,
+     32087,
+     31105,
+     28182
+    ],
+    "Neck": [
+     29381,
+     29119,
+     31275,
+     31695
+    ],
+    "Rings": [
+     30834,
+     29177,
+     31920,
+     30365,
+     23038,
+     31380
+    ],
+    "Trinkets": [
+     29383,
+     28034,
+     28288,
+     31856,
+     22954,
+     23041
+    ],
+    "2HandedWeapons": [
+     28429,
+     28441,
+     29356,
+     31322,
+     23541,
+     22798
+    ],
+    "Librams": [
+     27484,
+     22401,
+     23203,
+     22402
+    ],
+    "Shoulders": [
+     33173,
+     27771,
+     27434,
+     28865
+    ],
+    "Back": [
+     24259,
+     27878,
+     27892,
+     28249
+    ],
+    "Chest": [
+     23522,
+     28403,
+     24396,
+     31548
+    ],
+    "Wrist": [
+     23537,
+     28646,
+     29517,
+     27918
+    ],
+    "Hands": [
+     30341,
+     18823,
+     29509
+    ],
+    "Waist": [
+     29247,
+     27755,
+     27760,
+     29516,
+     27985
+    ],
+    "Legs": [
+     30257,
+     31544,
+     30533
+    ],
+    "Feet": [
+     25686,
+     28176,
+     27867,
+     28318
+    ]
+   },
+   "comparacion": {
+    "Head": {
+     "original": [
+      {
+       "id": 32461,
+       "nombre": "Gafas cacharráticas frenéticas",
+       "estado": "fuera",
+       "motivo": "fase 2 del TBC original"
+      },
+      {
+       "id": 32087,
+       "nombre": "Máscara del Falsario",
+       "estado": "insignias",
+       "motivo": "solo con insignias (lista aparte)"
+      }
+     ],
+     "prefase": [
+      {
+       "id": 28182,
+       "nombre": "Yelmo de la garra",
+       "ep": 205.3
+      },
+      {
+       "id": 28224,
+       "nombre": "Yelmo de transitayermos",
+       "ep": 198.2
+      }
+     ]
+    },
+    "Neck": {
+     "original": [
+      {
+       "id": 29381,
+       "nombre": "Gargantilla del propósito maligno",
+       "estado": "insignias",
+       "motivo": "solo con insignias (lista aparte)"
+      },
+      {
+       "id": 29119,
+       "nombre": "Baratija de Haramad",
+       "estado": "sigue",
+       "puesto": 2,
+       "ep": 94.0
+      }
+     ],
+     "prefase": [
+      {
+       "id": 31275,
+       "nombre": "Collar de trofeos",
+       "ep": 94.9
+      },
+      {
+       "id": 29119,
+       "nombre": "Baratija de Haramad",
+       "ep": 94.0
+      }
+     ]
+    },
+    "Finger": {
+     "original": [
+      {
+       "id": 30834,
+       "nombre": "Sello de cambiaformas",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 62.8
+      },
+      {
+       "id": 29177,
+       "nombre": "Mando de A'dal",
+       "estado": "sigue",
+       "puesto": 2,
+       "ep": 91.4
+      }
+     ],
+     "prefase": [
+      {
+       "id": 30365,
+       "nombre": "Sello de sobrestante",
+       "ep": 96.1
+      },
+      {
+       "id": 29177,
+       "nombre": "Mando de A'dal",
+       "ep": 91.4
+      }
+     ]
+    },
+    "Trinket": {
+     "original": [
+      {
+       "id": 29383,
+       "nombre": "Broche de Ansia de Sangre",
+       "estado": "insignias",
+       "motivo": "solo con insignias (lista aparte)"
+      },
+      {
+       "id": 28034,
+       "nombre": "Reloj de arena del liberador",
+       "estado": "sigue",
+       "puesto": 3,
+       "ep": 85.9
+      }
+     ],
+     "prefase": [
+      {
+       "id": 28288,
+       "nombre": "Ábaco de probabilidades agresivas",
+       "ep": 96.4
+      },
+      {
+       "id": 19406,
+       "nombre": "Dije de colmillo de draco",
+       "ep": 87.8
+      }
+     ]
+    },
+    "Weapon": {
+     "original": [
+      {
+       "id": 28429,
+       "nombre": "Campeón corazón de león",
+       "estado": "sigue",
+       "puesto": 1,
+       "ep": 1043.1
+      },
+      {
+       "id": 28441,
+       "nombre": "Trueno profundo",
+       "estado": "sigue",
+       "puesto": 3,
+       "ep": 1004.4
+      }
+     ],
+     "prefase": [
+      {
+       "id": 28429,
+       "nombre": "Campeón corazón de león",
+       "ep": 1043.1
+      },
+      {
+       "id": 28435,
+       "nombre": "Cortaluna",
+       "ep": 1034.1
+      }
+     ]
+    },
+    "Relic": {
+     "original": [
+      {
+       "id": 27484,
+       "nombre": "Tratado sobre revancha",
+       "estado": "sigue",
+       "puesto": 1,
+       "ep": 40.0
+      },
+      {
+       "id": 22401,
+       "nombre": "Tratado sobre Esperanza",
+       "estado": "fuera",
+       "motivo": "criatura sin ubicación conocida"
+      }
+     ],
+     "prefase": [
+      {
+       "id": 27484,
+       "nombre": "Tratado sobre revancha",
+       "ep": 40.0
+      }
+     ]
+    },
+    "Shoulder": {
+     "original": [
+      {
+       "id": 33173,
+       "nombre": "Sobrehombros de acerira",
+       "estado": "sigue",
+       "puesto": 1,
+       "ep": 154.9
+      },
+      {
+       "id": 27771,
+       "nombre": "Guardahombros de placas malditas",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 111.0
+      }
+     ],
+     "prefase": [
+      {
+       "id": 33173,
+       "nombre": "Sobrehombros de acerira",
+       "ep": 154.9
+      },
+      {
+       "id": 27797,
+       "nombre": "Hombreras de transitayermos",
+       "ep": 128.2
+      }
+     ]
+    },
+    "Back": {
+     "original": [
+      {
+       "id": 24259,
+       "nombre": "Sobrevesta de venganza",
+       "estado": "sigue",
+       "puesto": 2,
+       "ep": 101.3
+      },
+      {
+       "id": 27878,
+       "nombre": "Embozo mortuorio Auchenai",
+       "estado": "sigue",
+       "puesto": 3,
+       "ep": 80.0
+      }
+     ],
+     "prefase": [
+      {
+       "id": 33122,
+       "nombre": "Capa de oscuridad",
+       "ep": 105.4
+      },
+      {
+       "id": 24259,
+       "nombre": "Sobrevesta de venganza",
+       "ep": 101.3
+      }
+     ]
+    },
+    "Chest": {
+     "original": [
+      {
+       "id": 23522,
+       "nombre": "Coraza de acerira",
+       "estado": "sigue",
+       "puesto": 6,
+       "ep": 159.1
+      },
+      {
+       "id": 28403,
+       "nombre": "Coselete de placas malditas",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 158.0
+      }
+     ],
+     "prefase": [
+      {
+       "id": 28484,
+       "nombre": "Baluarte de reyes",
+       "ep": 227.4
+      },
+      {
+       "id": 28483,
+       "nombre": "Coraza de reyes",
+       "ep": 205.8
+      }
+     ]
+    },
+    "Wrist": {
+     "original": [
+      {
+       "id": 23537,
+       "nombre": "Brazales de acero vil negros",
+       "estado": "sigue",
+       "puesto": 1,
+       "ep": 90.5
+      },
+      {
+       "id": 28646,
+       "nombre": "Brazales escamados de Gran general",
+       "estado": "fuera",
+       "motivo": "sin fuente"
+      }
+     ],
+     "prefase": [
+      {
+       "id": 23537,
+       "nombre": "Brazales de acero vil negros",
+       "ep": 90.5
+      },
+      {
+       "id": 29527,
+       "nombre": "Brazales de golpe primigenio",
+       "ep": 81.0
+      }
+     ]
+    },
+    "Hands": {
+     "original": [
+      {
+       "id": 30341,
+       "nombre": "Guanteletes de tratante de carne",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 95.9
+      },
+      {
+       "id": 18823,
+       "nombre": "Guantes viejos de cuero del Núcleo",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 74.4
+      }
+     ],
+     "prefase": [
+      {
+       "id": 27497,
+       "nombre": "Guanteletes de placas malditas",
+       "ep": 139.1
+      },
+      {
+       "id": 29507,
+       "nombre": "Guantes destripaviento",
+       "ep": 138.5
+      }
+     ]
+    },
+    "Waist": {
+     "original": [
+      {
+       "id": 29247,
+       "nombre": "Faja del mortífero",
+       "estado": "sigue",
+       "puesto": 2,
+       "ep": 119.5
+      },
+      {
+       "id": 27755,
+       "nombre": "Faja de galantería",
+       "estado": "sigue",
+       "puesto": 1,
+       "ep": 126.6
+      }
+     ],
+     "prefase": [
+      {
+       "id": 27755,
+       "nombre": "Faja de galantería",
+       "ep": 126.6
+      },
+      {
+       "id": 29247,
+       "nombre": "Faja del mortífero",
+       "ep": 119.5
+      }
+     ]
+    },
+    "Legs": {
+     "original": [
+      {
+       "id": 30257,
+       "nombre": "Leotardos de Shattrath",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 154.8
+      },
+      {
+       "id": 31544,
+       "nombre": "Falda de pellejo de uñagrieta",
+       "estado": "baja",
+       "puesto": null,
+       "ep": 168.0
+      }
+     ],
+     "prefase": [
+      {
+       "id": 30535,
+       "nombre": "Falda de caminante del bosque",
+       "ep": 183.3
+      },
+      {
+       "id": 30538,
+       "nombre": "Musleras de medianoche",
+       "ep": 182.1
+      }
+     ]
+    },
+    "Feet": {
+     "original": [
+      {
+       "id": 25686,
+       "nombre": "Botas de cuero vil",
+       "estado": "sigue",
+       "puesto": 1,
+       "ep": 135.7
+      },
+      {
+       "id": 28176,
+       "nombre": "Grebas forjadas Sha'tari",
+       "estado": "sigue",
+       "puesto": 3,
+       "ep": 124.9
+      }
+     ],
+     "prefase": [
+      {
+       "id": 25686,
+       "nombre": "Botas de cuero vil",
+       "ep": 135.7
+      },
+      {
+       "id": 28318,
+       "nombre": "Pisabarros de obsidiana",
+       "ep": 126.5
+      }
+     ]
+    }
+   }
+  }
+ }
+}
